@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="297mm" height="210mm" viewBox="0 0 297 210">
+  <!--
+    FuzzleWorld × Giant Insect World — Common Darter dragonfly felt puzzle. A4 landscape, 6x2. Pieces actual size, may cross folds.
+    Finished built from same defs. Bottom text on shared grid. Fold ticks. Logo bg removed.
+    Photo © Sheelagh Halsey (Cheshire East), CC-BY, via iNaturalist. Logo © Giant Insect World.
+  -->
+  <style>
+    .t{font-family:'Nunito ExtraBold',sans-serif;fill:#2b3a44;} .n{font-family:'Nunito ExtraBold',sans-serif;fill:#3a6a8a;font-size:4.2px;}
+    .lbl{font-family:'Nunito ExtraBold',sans-serif;fill:#2b3a44;font-size:2.9px;}
+    .b{font-family:'Source Serif 4',serif;fill:#333;font-size:2.8px;} .s{font-family:'Source Serif 4',serif;fill:#666;font-size:2.3px;}
+    .i{font-family:'Source Serif 4',serif;fill:#2b2b2b;font-size:3.3px;} .cut{stroke:#1c1c1c;stroke-width:0.45;}
+    .org{fill:#e0662a;} .wing{fill:#efe7d2;} .dk{fill:#5a3722;} .blue{fill:#9cc0d6;}
+  </style>
+  <defs>
+    <!-- body: thorax (top) + long tapering abdomen, vertical -->
+    <path id="body" d="M0 -13 C 3.5 -13 5 -10 5 -6 C 5 -2 4 4 3 12 C 2.3 20 1.4 27 0 30 C -1.4 27 -2.3 20 -3 12 C -4 4 -5 -2 -5 -6 C -5 -10 -3.5 -13 0 -13 Z"/>
+    <!-- long narrow wing; root at left -->
+    <path id="wing" d="M0 0 C 11 -2.4 25 -2.6 35 -1.4 C 38 -1 39 0.4 38 1.6 C 34 2.8 20 3.2 11 3.2 C 5 3.2 0 1.6 0 0 Z"/>
+    <circle id="eye" r="3.2"/>
+  </defs>
+  <rect x="0" y="0" width="297" height="210" fill="#ffffff"/>
+
+  <!-- r1c1 body + eyes -->
+  <g transform="translate(0,0)">
+    <text x="4" y="9" class="t" font-size="4">Body ×1</text><text x="4" y="13" class="s">orange · thorax + long tail · actual size</text>
+    <use href="#body" class="cut org" transform="translate(24,34) scale(1.25)"/>
+    <use href="#eye" class="cut dk" transform="translate(30,84)"/>
+    <use href="#eye" class="cut dk" transform="translate(39,84)"/>
+    <text x="4" y="86" class="s">eyes ×2 · dark</text>
+    <text x="4" y="98" class="s">the thorax (top) is where wings attach</text>
+  </g>
+  <!-- r1c2 forewings -->
+  <g transform="translate(49.5,0)">
+    <text x="4" y="9" class="t" font-size="4">Wings ×2</text><text x="4" y="13" class="s">pale · the upper pair · actual size</text>
+    <use href="#wing" class="cut wing" transform="translate(5,30) scale(1.2)"/>
+    <use href="#wing" class="cut wing" transform="translate(5,50) scale(1.2)"/>
+    <text x="4" y="72" class="s">long &amp; narrow with rounded tips</text>
+  </g>
+  <!-- r1c3 hindwings -->
+  <g transform="translate(99,0)">
+    <text x="4" y="9" class="t" font-size="4">Wings ×2</text><text x="4" y="13" class="s">pale · the lower pair · actual size</text>
+    <use href="#wing" class="cut wing" transform="translate(5,30) scale(1.2)"/>
+    <use href="#wing" class="cut wing" transform="translate(5,50) scale(1.2)"/>
+    <text x="4" y="72" class="s">4 wings in total — all the same</text>
+  </g>
+  <!-- r1c4 finished -->
+  <g transform="translate(148.5,0)">
+    <text x="4" y="9" class="t" font-size="4.2">Finished!</text><text x="4" y="13" class="s">the same pieces, assembled</text>
+    <rect class="blue" x="4" y="24" width="42" height="56" rx="4" opacity="0.55"/>
+    <g transform="translate(25,50)">
+      <!-- wings (behind body) -->
+      <use href="#wing" class="wing cut" transform="translate(2,-6) rotate(-16) scale(0.55)"/>
+      <use href="#wing" class="wing cut" transform="translate(-2,-6) rotate(16) scale(-0.55,0.55)"/>
+      <use href="#wing" class="wing cut" transform="translate(2,-3) rotate(16) scale(0.55)"/>
+      <use href="#wing" class="wing cut" transform="translate(-2,-3) rotate(-16) scale(-0.55,0.55)"/>
+      <!-- body -->
+      <use href="#body" class="org cut" transform="scale(0.62)"/>
+      <!-- eyes -->
+      <use href="#eye" class="dk" transform="translate(-2.6,-9) scale(0.55)"/>
+      <use href="#eye" class="dk" transform="translate(2.6,-9) scale(0.55)"/>
+    </g>
+    <text x="24.75" y="88" text-anchor="middle" class="s">long body down the centre · 4 wings out wide · ≈ 9 × 8 cm</text>
+  </g>
+  <!-- r1c5 real thing -->
+  <g transform="translate(198,0)">
+    <text x="4" y="9" class="t" font-size="4.2">The real thing</text>
+    <image xlink:href="_thumb.jpg" href="_thumb.jpg" x="5" y="13" width="39.5" height="26" preserveAspectRatio="xMidYMid slice"/>
+    <rect x="5" y="13" width="39.5" height="26" fill="none" stroke="#c8c2b2" stroke-width="0.4"/>
+    <text x="4" y="47" class="b">Sympetrum striolatum —</text><text x="4" y="51" class="b">the Common Darter, a</text><text x="4" y="55" class="b">red pond dragonfly.</text>
+    <text x="4" y="64" class="s">Photo © Sheelagh Halsey, CC-BY,</text><text x="4" y="67.5" class="s">via iNaturalist. Photographed in</text>
+    <text x="4" y="71" class="s">Cheshire East — about</text><text x="4" y="74.5" class="s">15 km from Manchester.</text>
+  </g>
+  <!-- r1c6 facts -->
+  <g transform="translate(247.5,0)">
+    <text x="4" y="9" class="t" font-size="4.2">Did you know?</text>
+    <text x="4" y="20" class="b">· One of the last dragonflies</text><text x="6" y="23.8" class="b">still flying in autumn.</text>
+    <text x="4" y="33" class="b">· Its 4 wings beat separately</text><text x="6" y="36.8" class="b">— it can even fly backwards.</text>
+    <text x="4" y="46" class="b">· Huge eyes see almost</text><text x="6" y="49.8" class="b">all the way around.</text>
+    <text x="4" y="59" class="b">· A fierce hunter, catching</text><text x="6" y="62.8" class="b">midges in mid-air.</text>
+    <text x="4" y="72" class="b">· It starts life underwater</text><text x="6" y="75.8" class="b">as a nymph.</text>
+  </g>
+
+  <!-- r2c1 how to make it -->
+  <g transform="translate(0,105)">
+    <text x="4" y="10" class="t" font-size="4.6">How to make it</text><text x="4" y="15" class="s">from your felt squares</text>
+    <text x="5" y="28" class="n">1</text><text x="11" y="27.5" class="i">Trace each shape onto</text><text x="11" y="31.7" class="i">the right felt colour.</text>
+    <text x="5" y="44" class="n">2</text><text x="11" y="43.5" class="i">Cut out all 7 pieces.</text>
+    <text x="5" y="55" class="n">3</text><text x="11" y="54.5" class="i">Build it on the mat →</text>
+    <text x="4" y="66" class="lbl">Felt squares you'll use:</text>
+    <rect class="cut org"  x="4" y="69" width="4.5" height="4.5" rx="0.9"/><text x="11" y="72.6" class="b">orange — body</text>
+    <rect class="cut wing" x="4" y="75" width="4.5" height="4.5" rx="0.9"/><text x="11" y="78.6" class="b">pale cream — 4 wings</text>
+    <rect class="cut dk"   x="4" y="81" width="4.5" height="4.5" rx="0.9"/><text x="11" y="84.6" class="b">dark brown — 2 eyes</text>
+    <text x="4" y="95" class="s">Blue pond mat/pouch is premade.</text>
+  </g>
+  <!-- r2c2 build it -->
+  <g transform="translate(49.5,105)">
+    <text x="4" y="10" class="t" font-size="4.6">Build it</text><text x="4" y="15" class="s">lay the pieces on the mat</text>
+    <text x="5" y="28" class="n">1</text><text x="11" y="27.5" class="i">Lay the blue mat down</text><text x="11" y="31.7" class="i">— that's your pond.</text>
+    <text x="5" y="44" class="n">2</text><text x="11" y="43.5" class="i">Place the long orange</text><text x="11" y="47.7" class="i">body down the middle.</text>
+    <text x="5" y="60" class="n">3</text><text x="11" y="59.5" class="i">Add the 2 dark eyes at</text><text x="11" y="63.7" class="i">the top (the head).</text>
+    <text x="4" y="84" class="s">Nothing is fixed — the pieces</text><text x="4" y="87.5" class="s">just sit like a jigsaw.</text>
+  </g>
+  <!-- r2c3 and again -->
+  <g transform="translate(99,105)">
+    <text x="4" y="10" class="t" font-size="4.6">…and again</text><text x="4" y="15" class="s">it's a puzzle, not a glue-up</text>
+    <text x="5" y="28" class="n">4</text><text x="11" y="27.5" class="i">Add 2 wings each side —</text><text x="11" y="31.7" class="i">spread them out wide.</text>
+    <text x="5" y="44" class="n">5</text><text x="11" y="43.5" class="i">Upper pair angle up,</text><text x="11" y="47.7" class="i">lower pair angle down.</text>
+    <text x="5" y="60" class="n">6</text><text x="11" y="59.5" class="i">Done! Take it apart</text><text x="11" y="63.7" class="i">and build it all again.</text>
+    <text x="4" y="84" class="s">Real darters hold their wings</text><text x="4" y="87.5" class="s">flat out, ready to dart off.</text>
+  </g>
+  <!-- r2c4 at a glance -->
+  <g transform="translate(148.5,105)">
+    <text x="4" y="10" class="t" font-size="4.2">At a glance</text>
+    <text x="4" y="20" class="lbl">7 felt pieces</text>
+    <text x="6" y="27" class="b">· 1 body (orange)</text>
+    <text x="6" y="33" class="b">· 4 wings (pale cream)</text>
+    <text x="6" y="39" class="b">· 2 eyes (dark brown)</text>
+    <text x="4" y="50" class="lbl">Finished size</text><text x="6" y="57" class="b">≈ 9 × 8 cm</text>
+    <text x="4" y="70" class="s">Theme: Aquatic. Collect the</text><text x="4" y="73.5" class="s">river skater, dragonfly and</text><text x="4" y="77" class="s">bell spider.</text>
+  </g>
+  <!-- r2c5 cover -->
+  <g transform="translate(198,105)">
+    <rect x="1.5" y="1.5" width="46.5" height="49.5" rx="3" fill="#ffffff" stroke="#d5dde2" stroke-width="0.5"/>
+    <rect x="1.5" y="1.5" width="46.5" height="3" rx="1.5" fill="#3a6a8a"/>
+    <image xlink:href="_giw-logo-t.png" href="_giw-logo-t.png" x="12" y="7" width="25.5" height="18.9" preserveAspectRatio="xMidYMid meet"/>
+    <text x="24.75" y="31" text-anchor="middle" class="b" font-size="3.2">Make your own</text>
+    <text x="24.75" y="38.5" text-anchor="middle" class="t" font-size="5.2">Dragonfly</text>
+    <line x1="18" y1="41.5" x2="31.5" y2="41.5" stroke="#c4d0d6" stroke-width="0.5"/>
+    <text x="24.75" y="47.5" text-anchor="middle" class="t" font-size="4.6" fill="#3a6a8a">Instructions</text>
+    <text x="24.75" y="63" text-anchor="middle" class="b">A Giant Insect World felt puzzle</text>
+    <text x="24.75" y="67.5" text-anchor="middle" class="s">build it · take it apart · build it again</text>
+    <g transform="translate(24.75,84)">
+      <use href="#wing" class="wing" transform="translate(1,-2) rotate(-16) scale(0.32)"/>
+      <use href="#wing" class="wing" transform="translate(-1,-2) rotate(16) scale(-0.32,0.32)"/>
+      <use href="#wing" class="wing" transform="translate(1,0) rotate(16) scale(0.32)"/>
+      <use href="#wing" class="wing" transform="translate(-1,0) rotate(-16) scale(-0.32,0.32)"/>
+      <use href="#body" class="org" transform="scale(0.36)"/>
+    </g>
+  </g>
+  <!-- r2c6 back -->
+  <g transform="translate(247.5,105)">
+    <text x="24.75" y="17" text-anchor="middle" class="t" font-size="7" fill="#3a6a8a">FuzzleWorld</text>
+    <text x="24.75" y="22.5" text-anchor="middle" class="s">downloadable felt puzzle kits</text>
+    <text x="24.75" y="39" text-anchor="middle" class="t" font-size="3.8">Collect the set</text>
+    <text x="24.75" y="48" text-anchor="middle" class="b">Meadow · Aquatic · Underground</text>
+    <text x="24.75" y="58" text-anchor="middle" class="s">river skater · dragonfly · bell spider</text>
+    <text x="24.75" y="61.5" text-anchor="middle" class="s">butterfly · ladybird · more…</text>
+    <text x="24.75" y="86" text-anchor="middle" class="s">Species: S. striolatum · Photo ©</text>
+    <text x="24.75" y="89.5" text-anchor="middle" class="s">Sheelagh Halsey, CC-BY · Logo ©</text>
+    <text x="24.75" y="93" text-anchor="middle" class="s">Giant Insect World</text>
+  </g>
+
+  <g stroke="#a6b3bb" stroke-width="0.5" fill="none">
+    <line x1="49.5" y1="0" x2="49.5" y2="5"/><line x1="49.5" y1="205" x2="49.5" y2="210"/>
+    <line x1="99" y1="0" x2="99" y2="5"/><line x1="99" y1="205" x2="99" y2="210"/>
+    <line x1="148.5" y1="0" x2="148.5" y2="5"/><line x1="148.5" y1="205" x2="148.5" y2="210"/>
+    <line x1="198" y1="0" x2="198" y2="5"/><line x1="198" y1="205" x2="198" y2="210"/>
+    <line x1="247.5" y1="0" x2="247.5" y2="5"/><line x1="247.5" y1="205" x2="247.5" y2="210"/>
+    <line x1="0" y1="105" x2="5" y2="105"/><line x1="292" y1="105" x2="297" y2="105"/>
+  </g>
+  <rect x="0.4" y="0.4" width="296.2" height="209.2" fill="none" stroke="#d7d7d7" stroke-width="0.4"/>
+  <text x="4" y="208.4" class="s" fill="#b3b3b3" font-size="1.9">Print A4 landscape at 100% (actual size) · fold into 6 × 2 where the edge marks line up · cover = top half of row 2, column 5</text>
+</svg>

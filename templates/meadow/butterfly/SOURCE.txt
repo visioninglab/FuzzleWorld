@@ -1,0 +1,21 @@
+Small Tortoiseshell (Aglais urticae) — source image
+====================================================
+
+Naming convention: <common-english>_<Latin-binomial>_<photographer>_<cc-requirement>.jpg
+
+File:         small-tortoiseshell_Aglais-urticae_nevwright_CC-BY.jpg
+Species:      Aglais urticae (Small Tortoiseshell) — a meadow/garden butterfly
+Photographer: nevwright (iNaturalist username)
+Location:     Greater Manchester, UK (~17 km W of Manchester city centre —
+              closest clear open-wing dorsal shot with a CC licence)
+Source:       https://www.inaturalist.org/observations/57474929
+Photo:        https://inaturalist-open-data.s3.amazonaws.com/photos/91677170/original.jpeg
+
+Licence:      CC BY 4.0 (attribution REQUIRED)
+              https://creativecommons.org/licenses/by/4.0/
+
+Required attribution (must accompany any use):
+  Small Tortoiseshell photo © nevwright, CC BY 4.0, via iNaturalist.
+
+Note: a closer CC0 shot exists (Middleton, ~8 km) but was too soft/cluttered to use as
+a felt reference; this open-wing dorsal view is far clearer for the pattern.

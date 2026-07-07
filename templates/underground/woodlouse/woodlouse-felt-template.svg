@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="297mm" height="210mm" viewBox="0 0 297 210">
+  <!--
+    FuzzleWorld × Giant Insect World — Common Shiny Woodlouse felt puzzle. A4 landscape, 6x2. Pieces actual size, may cross folds.
+    Finished from same defs. Bottom text on shared grid. Fold ticks. Logo bg removed.
+    Photo © Stuart Fraser (Manchester M21), CC-BY, via iNaturalist. Logo © Giant Insect World.
+  -->
+  <style>
+    .t{font-family:'Nunito ExtraBold',sans-serif;fill:#3d3326;} .n{font-family:'Nunito ExtraBold',sans-serif;fill:#8a6a3a;font-size:4.2px;}
+    .lbl{font-family:'Nunito ExtraBold',sans-serif;fill:#3d3326;font-size:2.9px;}
+    .b{font-family:'Source Serif 4',serif;fill:#333;font-size:2.8px;} .s{font-family:'Source Serif 4',serif;fill:#666;font-size:2.3px;}
+    .i{font-family:'Source Serif 4',serif;fill:#2b2b2b;font-size:3.3px;} .cut{stroke:#1c1c1c;stroke-width:0.45;}
+    .gry{fill:#9a988e;} .dg{fill:#6a665c;} .soil{fill:#a3805a;}
+    .seg{stroke:#6a665c;stroke-width:0.5;fill:none;}
+  </style>
+  <defs>
+    <path id="body" d="M0 -9 C 11 -9 19 -5 19 0 C 19 5 11 9 0 9 C -11 9 -19 5 -19 0 C -19 -5 -11 -9 0 -9 Z"/>
+    <path id="head" d="M0 -5.5 C 3.5 -5.5 6 -2.5 6 0.5 C 6 3.5 3.5 5.5 0 5.5 C -3.5 5.5 -6 3 -6 0 C -6 -3 -3.5 -5.5 0 -5.5 Z"/>
+    <path id="ant" d="M0 0 C 4 -1.5 8 -2.5 12 -2.8 L 12 -1.5 C 8 -1.2 4 -0.2 0.6 1.4 Z"/>
+    <path id="leg" d="M0 0 C 3 0.3 6 0.9 9 2 C 6 2.4 3 2.2 0 2 Z"/>
+  </defs>
+  <rect x="0" y="0" width="297" height="210" fill="#ffffff"/>
+
+  <!-- r1c1 body -->
+  <g transform="translate(0,0)">
+    <text x="4" y="9" class="t" font-size="4">Body ×1</text><text x="4" y="13" class="s">grey · segmented oval · actual size</text>
+    <use href="#body" class="cut gry" transform="translate(24,46) scale(1.2)"/>
+    <g class="seg" transform="translate(24,46) scale(1.2)">
+      <path d="M-13 -8 C -13.5 0 -13.5 0 -13 8"/><path d="M-7 -8.6 C -7.5 0 -7.5 0 -7 8.6"/>
+      <path d="M0 -9 C -0.5 0 -0.5 0 0 9"/><path d="M7 -8.6 C 6.5 0 6.5 0 7 8.6"/><path d="M13 -8 C 12.5 0 12.5 0 13 8"/>
+    </g>
+    <text x="4" y="74" class="s">thin lines = its armour segments</text>
+    <text x="4" y="77.5" class="s">(a guide — don't cut them)</text>
+  </g>
+  <!-- r1c2 legs + antennae -->
+  <g transform="translate(49.5,0)">
+    <text x="4" y="9" class="t" font-size="4">Legs &amp; antennae</text><text x="4" y="13" class="s">actual size</text>
+    <use href="#leg" class="cut dg" transform="translate(6,24) scale(1.15)"/>
+    <use href="#leg" class="cut dg" transform="translate(6,31) scale(1.15)"/>
+    <use href="#leg" class="cut dg" transform="translate(6,38) scale(1.15)"/>
+    <use href="#leg" class="cut dg" transform="translate(26,24) scale(1.15)"/>
+    <use href="#leg" class="cut dg" transform="translate(26,31) scale(1.15)"/>
+    <use href="#leg" class="cut dg" transform="translate(26,38) scale(1.15)"/>
+    <text x="4" y="50" class="s">legs ×6 · dark grey (3 each side)</text>
+    <use href="#ant" class="cut gry" transform="translate(8,64) scale(1.15)"/>
+    <use href="#ant" class="cut gry" transform="translate(8,72) scale(1.15)"/>
+    <text x="4" y="84" class="s">antennae ×2 · grey (at the front)</text>
+  </g>
+  <!-- r1c3 head -->
+  <g transform="translate(99,0)">
+    <text x="4" y="9" class="t" font-size="4">Head ×1</text><text x="4" y="13" class="s">grey · actual size</text>
+    <use href="#head" class="cut gry" transform="translate(20,32) scale(1.2)"/>
+    <text x="4" y="52" class="s">The head goes at the front,</text>
+    <text x="4" y="55.5" class="s">where the antennae attach.</text>
+    <text x="4" y="64" class="s">A woodlouse is a crustacean</text>
+    <text x="4" y="67.5" class="s">— more like a crab than an</text>
+    <text x="4" y="71" class="s">insect!</text>
+  </g>
+  <!-- r1c4 finished -->
+  <g transform="translate(148.5,0)">
+    <text x="4" y="9" class="t" font-size="4.2">Finished!</text><text x="4" y="13" class="s">the same pieces, assembled</text>
+    <rect class="soil" x="4" y="24" width="42" height="54" rx="4" opacity="0.5"/>
+    <g transform="translate(25,52)">
+      <!-- legs (poking out top &amp; bottom) -->
+      <g stroke="#6a665c" stroke-width="1" stroke-linecap="round">
+        <line x1="-9" y1="-6" x2="-11" y2="-10"/><line x1="-1" y1="-7" x2="-2" y2="-11"/><line x1="7" y1="-6" x2="8" y2="-10"/>
+        <line x1="-9" y1="6" x2="-11" y2="10"/><line x1="-1" y1="7" x2="-2" y2="11"/><line x1="7" y1="6" x2="8" y2="10"/>
+      </g>
+      <!-- body -->
+      <use href="#body" class="gry cut" transform="scale(0.62)"/>
+      <!-- segment lines -->
+      <g class="seg" transform="scale(0.62)"><path d="M-13 -8 C -13.5 0 -13.5 0 -13 8"/><path d="M-7 -8.6 C -7.5 0 -7.5 0 -7 8.6"/><path d="M0 -9 C -0.5 0 -0.5 0 0 9"/><path d="M7 -8.6 C 6.5 0 6.5 0 7 8.6"/><path d="M13 -8 C 12.5 0 12.5 0 13 8"/></g>
+      <!-- head (front, left) -->
+      <use href="#head" class="gry cut" transform="translate(-13,0) scale(0.62)"/>
+      <!-- antennae -->
+      <use href="#ant" class="gry" transform="translate(-16,-1) scale(0.85)"/>
+      <use href="#ant" class="gry" transform="translate(-16,2) scale(0.85)"/>
+    </g>
+    <text x="24.75" y="86" text-anchor="middle" class="s">segmented armour · head &amp; antennae at the front · ≈ 5 × 3 cm</text>
+  </g>
+  <!-- r1c5 real thing -->
+  <g transform="translate(198,0)">
+    <text x="4" y="9" class="t" font-size="4.2">The real thing</text>
+    <image xlink:href="_thumb.jpg" href="_thumb.jpg" x="5" y="13" width="39.5" height="26" preserveAspectRatio="xMidYMid slice"/>
+    <rect x="5" y="13" width="39.5" height="26" fill="none" stroke="#c8c2b2" stroke-width="0.4"/>
+    <text x="4" y="47" class="b">Oniscus asellus — the</text><text x="4" y="51" class="b">Common Shiny Woodlouse,</text><text x="4" y="55" class="b">found under logs &amp; stones.</text>
+    <text x="4" y="64" class="s">Photo © Stuart Fraser, CC-BY,</text><text x="4" y="67.5" class="s">via iNaturalist. Photographed in</text>
+    <text x="4" y="71" class="s">Manchester (M21) — about</text><text x="4" y="74.5" class="s">4 km from the city centre.</text>
+  </g>
+  <!-- r1c6 facts -->
+  <g transform="translate(247.5,0)">
+    <text x="4" y="9" class="t" font-size="4.2">Did you know?</text>
+    <text x="4" y="20" class="b">· It's a crustacean — more</text><text x="6" y="23.8" class="b">closely related to crabs!</text>
+    <text x="4" y="33" class="b">· It breathes through gills</text><text x="6" y="36.8" class="b">and needs damp places.</text>
+    <text x="4" y="46" class="b">· It has 14 legs and 2 pairs</text><text x="6" y="49.8" class="b">of antennae.</text>
+    <text x="4" y="59" class="b">· It recycles rotting leaves,</text><text x="6" y="62.8" class="b">helping make new soil.</text>
+    <text x="4" y="72" class="b">· Also called a roly-poly,</text><text x="6" y="75.8" class="b">cheeselog or pill bug.</text>
+  </g>
+
+  <!-- r2c1 how to make it -->
+  <g transform="translate(0,105)">
+    <text x="4" y="10" class="t" font-size="4.6">How to make it</text><text x="4" y="15" class="s">from your felt squares</text>
+    <text x="5" y="28" class="n">1</text><text x="11" y="27.5" class="i">Trace each shape onto</text><text x="11" y="31.7" class="i">the right felt colour.</text>
+    <text x="5" y="44" class="n">2</text><text x="11" y="43.5" class="i">Cut out all 10 pieces.</text>
+    <text x="5" y="55" class="n">3</text><text x="11" y="54.5" class="i">Build it on the mat →</text>
+    <text x="4" y="66" class="lbl">Felt squares you'll use:</text>
+    <rect class="cut gry" x="4" y="69" width="4.5" height="4.5" rx="0.9"/><text x="11" y="72.6" class="b">grey — body, head, antennae</text>
+    <rect class="cut dg"  x="4" y="75" width="4.5" height="4.5" rx="0.9"/><text x="11" y="78.6" class="b">dark grey — 6 legs</text>
+    <text x="4" y="90" class="s">Brown soil mat/pouch is premade.</text>
+  </g>
+  <!-- r2c2 build it -->
+  <g transform="translate(49.5,105)">
+    <text x="4" y="10" class="t" font-size="4.6">Build it</text><text x="4" y="15" class="s">lay the pieces on the mat</text>
+    <text x="5" y="28" class="n">1</text><text x="11" y="27.5" class="i">Lay the brown mat down</text><text x="11" y="31.7" class="i">— that's the soil.</text>
+    <text x="5" y="44" class="n">2</text><text x="11" y="43.5" class="i">Place the grey body; add</text><text x="11" y="47.7" class="i">the head at the front.</text>
+    <text x="5" y="60" class="n">3</text><text x="11" y="59.5" class="i">Tuck 6 legs under —</text><text x="11" y="63.7" class="i">three each side.</text>
+    <text x="4" y="84" class="s">Nothing is fixed — the pieces</text><text x="4" y="87.5" class="s">just sit like a jigsaw.</text>
+  </g>
+  <!-- r2c3 and again -->
+  <g transform="translate(99,105)">
+    <text x="4" y="10" class="t" font-size="4.6">…and again</text><text x="4" y="15" class="s">it's a puzzle, not a glue-up</text>
+    <text x="5" y="28" class="n">4</text><text x="11" y="27.5" class="i">Add the 2 antennae at</text><text x="11" y="31.7" class="i">the front of the head.</text>
+    <text x="5" y="44" class="n">5</text><text x="11" y="43.5" class="i">The lines on the body</text><text x="11" y="47.7" class="i">show its armour segments.</text>
+    <text x="5" y="60" class="n">6</text><text x="11" y="59.5" class="i">Done! Take it apart</text><text x="11" y="63.7" class="i">and build it all again.</text>
+    <text x="4" y="84" class="s">Real woodlice can roll into</text><text x="4" y="87.5" class="s">a ball when scared.</text>
+  </g>
+  <!-- r2c4 at a glance -->
+  <g transform="translate(148.5,105)">
+    <text x="4" y="10" class="t" font-size="4.2">At a glance</text>
+    <text x="4" y="20" class="lbl">10 felt pieces</text>
+    <text x="6" y="27" class="b">· 1 body (grey)</text>
+    <text x="6" y="33" class="b">· 1 head (grey)</text>
+    <text x="6" y="39" class="b">· 2 antennae (grey)</text>
+    <text x="6" y="45" class="b">· 6 legs (dark grey)</text>
+    <text x="4" y="56" class="lbl">Finished size</text><text x="6" y="63" class="b">≈ 5 × 3 cm</text>
+    <text x="4" y="74" class="s">Theme: Underground. Collect the</text><text x="4" y="77.5" class="s">woodlouse, earthworm and ant.</text>
+  </g>
+  <!-- r2c5 cover -->
+  <g transform="translate(198,105)">
+    <rect x="1.5" y="1.5" width="46.5" height="49.5" rx="3" fill="#ffffff" stroke="#e0d6c8" stroke-width="0.5"/>
+    <rect x="1.5" y="1.5" width="46.5" height="3" rx="1.5" fill="#8a6a3a"/>
+    <image xlink:href="_giw-logo-t.png" href="_giw-logo-t.png" x="12" y="7" width="25.5" height="18.9" preserveAspectRatio="xMidYMid meet"/>
+    <text x="24.75" y="31" text-anchor="middle" class="b" font-size="3.2">Make your own</text>
+    <text x="24.75" y="38.5" text-anchor="middle" class="t" font-size="4.8">Woodlouse</text>
+    <line x1="18" y1="41.5" x2="31.5" y2="41.5" stroke="#ded2c0" stroke-width="0.5"/>
+    <text x="24.75" y="47.5" text-anchor="middle" class="t" font-size="4.6" fill="#8a6a3a">Instructions</text>
+    <text x="24.75" y="63" text-anchor="middle" class="b">A Giant Insect World felt puzzle</text>
+    <text x="24.75" y="67.5" text-anchor="middle" class="s">build it · take it apart · build it again</text>
+    <g transform="translate(24.75,84)">
+      <ellipse class="gry" cx="0" cy="0" rx="11" ry="5.5"/>
+      <g class="seg"><path d="M-7 -5 C -7.3 0 -7.3 0 -7 5"/><path d="M0 -5.5 C -0.3 0 -0.3 0 0 5.5"/><path d="M7 -5 C 6.7 0 6.7 0 7 5"/></g>
+      <use href="#head" class="gry" transform="translate(-9,0) scale(0.7)"/>
+    </g>
+  </g>
+  <!-- r2c6 back -->
+  <g transform="translate(247.5,105)">
+    <text x="24.75" y="17" text-anchor="middle" class="t" font-size="7" fill="#8a6a3a">FuzzleWorld</text>
+    <text x="24.75" y="22.5" text-anchor="middle" class="s">downloadable felt puzzle kits</text>
+    <text x="24.75" y="39" text-anchor="middle" class="t" font-size="3.8">Collect the set</text>
+    <text x="24.75" y="48" text-anchor="middle" class="b">Meadow · Aquatic · Underground</text>
+    <text x="24.75" y="58" text-anchor="middle" class="s">woodlouse · earthworm · ant</text>
+    <text x="24.75" y="61.5" text-anchor="middle" class="s">butterfly · dragonfly · more…</text>
+    <text x="24.75" y="86" text-anchor="middle" class="s">Species: O. asellus · Photo ©</text>
+    <text x="24.75" y="89.5" text-anchor="middle" class="s">Stuart Fraser, CC-BY · Logo ©</text>
+    <text x="24.75" y="93" text-anchor="middle" class="s">Giant Insect World</text>
+  </g>
+
+  <g stroke="#c2ac90" stroke-width="0.5" fill="none">
+    <line x1="49.5" y1="0" x2="49.5" y2="5"/><line x1="49.5" y1="205" x2="49.5" y2="210"/>
+    <line x1="99" y1="0" x2="99" y2="5"/><line x1="99" y1="205" x2="99" y2="210"/>
+    <line x1="148.5" y1="0" x2="148.5" y2="5"/><line x1="148.5" y1="205" x2="148.5" y2="210"/>
+    <line x1="198" y1="0" x2="198" y2="5"/><line x1="198" y1="205" x2="198" y2="210"/>
+    <line x1="247.5" y1="0" x2="247.5" y2="5"/><line x1="247.5" y1="205" x2="247.5" y2="210"/>
+    <line x1="0" y1="105" x2="5" y2="105"/><line x1="292" y1="105" x2="297" y2="105"/>
+  </g>
+  <rect x="0.4" y="0.4" width="296.2" height="209.2" fill="none" stroke="#d7d7d7" stroke-width="0.4"/>
+  <text x="4" y="208.4" class="s" fill="#b3b3b3" font-size="1.9">Print A4 landscape at 100% (actual size) · fold into 6 × 2 where the edge marks line up · cover = top half of row 2, column 5</text>
+</svg>

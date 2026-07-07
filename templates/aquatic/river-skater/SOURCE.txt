@@ -1,0 +1,26 @@
+River Skater (Aquarius najas) — source images
+==============================================
+
+Naming convention for iNaturalist images in this kit:
+  <common-english>_<Latin-binomial>_<photographer>_<cc-requirement>.jpg
+
+PRIMARY (best pose — clean single-specimen dorsal view)
+  File:     river-skater_Aquarius-najas_Alfie-Felton_CC0.jpg
+  Licence:  CC0 1.0 (public domain — no attribution required)
+            https://creativecommons.org/publicdomain/zero/1.0/
+  Source:   https://www.inaturalist.org/observations/350336782
+
+BACKUP (two specimens, top-down)
+  File:     river-skater_Aquarius-najas_Alfie-Felton_CC-BY.jpg
+  Licence:  CC BY 4.0 (attribution REQUIRED)
+            https://creativecommons.org/licenses/by/4.0/
+  Source:   https://www.inaturalist.org/observations/350336793
+
+Species:      Aquarius najas (River Skater) — a pond skater, family Gerridae
+Photographer: Alfie Felton (iNaturalist user: jaiiiiiiii_)
+Location:     Littleborough, UK (~20 km NE of Manchester — closest CC-licensed
+              pond skater to the city on iNaturalist)
+
+Courtesy credit (use on the kit even though the CC0 image doesn't require it):
+  River skater photo © Alfie Felton, via iNaturalist.
+For the CC-BY backup image this credit line is MANDATORY.

@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="297mm" height="210mm" viewBox="0 0 297 210">
+  <!--
+    FuzzleWorld × Giant Insect World — Common Earthworm felt puzzle. A4 landscape, 6x2. Pieces actual size, may cross folds.
+    Finished from same defs. Bottom text on shared grid. Fold ticks. Logo bg removed.
+    Photo © Daniel Buczkiewicz (Derbyshire), CC-BY, via iNaturalist. Logo © Giant Insect World.
+  -->
+  <style>
+    .t{font-family:'Nunito ExtraBold',sans-serif;fill:#3d3326;} .n{font-family:'Nunito ExtraBold',sans-serif;fill:#8a6a3a;font-size:4.2px;}
+    .lbl{font-family:'Nunito ExtraBold',sans-serif;fill:#3d3326;font-size:2.9px;}
+    .b{font-family:'Source Serif 4',serif;fill:#333;font-size:2.8px;} .s{font-family:'Source Serif 4',serif;fill:#666;font-size:2.3px;}
+    .i{font-family:'Source Serif 4',serif;fill:#2b2b2b;font-size:3.3px;} .cut{stroke:#1c1c1c;stroke-width:0.45;}
+    .worm{fill:#a35a3e;} .sad{fill:#cf9866;} .soil{fill:#a3805a;} .ring{stroke:#7a3e2a;stroke-width:0.5;fill:none;}
+  </style>
+  <defs>
+    <!-- front section: pointed head at top, joins at bottom -->
+    <path id="front" d="M0 -22 C 2.6 -21 3.6 -18 3.6 -13 C 3.6 -5 3.2 8 2.7 16 C 2.4 19.5 1.3 21 0 21 C -1.3 21 -2.4 19.5 -2.7 16 C -3.2 8 -3.6 -5 -3.6 -13 C -3.6 -18 -2.6 -21 0 -22 Z"/>
+    <!-- rear section: joins at top, pointed tail at bottom -->
+    <path id="rear" d="M0 -21 C 2.6 -21 3.6 -18 3.6 -13 C 3.2 -4 2.7 8 2.1 16 C 1.6 20 0.8 22 0 22 C -0.8 22 -1.6 20 -2.1 16 C -2.7 8 -3.2 -4 -3.6 -13 C -3.6 -18 -2.6 -21 0 -21 Z"/>
+    <!-- saddle band (wider than tall — wraps across the worm) -->
+    <path id="saddle" d="M0 -4.6 C 5.5 -4.6 8.5 -2 8.5 0 C 8.5 2 5.5 4.6 0 4.6 C -5.5 4.6 -8.5 2 -8.5 0 C -8.5 -2 -5.5 -4.6 0 -4.6 Z"/>
+    <g id="frings" class="ring"><path d="M-3.4 -12 C 0 -11 0 -11 3.4 -12"/><path d="M-3.5 -6 C 0 -5 0 -5 3.5 -6"/><path d="M-3.6 0 C 0 1 0 1 3.6 0"/><path d="M-3.4 6 C 0 7 0 7 3.4 6"/><path d="M-3 12 C 0 13 0 13 3 12"/></g>
+    <g id="rrings" class="ring"><path d="M-3.5 -12 C 0 -11 0 -11 3.5 -12"/><path d="M-3.5 -6 C 0 -5 0 -5 3.5 -6"/><path d="M-3.4 0 C 0 1 0 1 3.4 0"/><path d="M-3 6 C 0 7 0 7 3 6"/><path d="M-2.4 12 C 0 13 0 13 2.4 12"/></g>
+  </defs>
+  <rect x="0" y="0" width="297" height="210" fill="#ffffff"/>
+
+  <!-- r1c1 front section -->
+  <g transform="translate(0,0)">
+    <text x="4" y="9" class="t" font-size="4">Front body ×1</text><text x="4" y="13" class="s">reddish · pointed head · actual size</text>
+    <use href="#front" class="cut worm" transform="translate(24,50) scale(1.25)"/>
+    <use href="#frings" transform="translate(24,50) scale(1.25)"/>
+    <text x="4" y="90" class="s">head is the pointed end · lines = segment rings</text>
+  </g>
+  <!-- r1c2 rear section -->
+  <g transform="translate(49.5,0)">
+    <text x="4" y="9" class="t" font-size="4">Rear body ×1</text><text x="4" y="13" class="s">reddish · pointed tail · actual size</text>
+    <use href="#rear" class="cut worm" transform="translate(24,50) scale(1.25)"/>
+    <use href="#rrings" transform="translate(24,50) scale(1.25)"/>
+    <text x="4" y="90" class="s">joins the front body in the middle</text>
+  </g>
+  <!-- r1c3 saddle -->
+  <g transform="translate(99,0)">
+    <text x="4" y="9" class="t" font-size="4">Saddle ×1</text><text x="4" y="13" class="s">pale orange · actual size</text>
+    <use href="#saddle" class="cut sad" transform="translate(22,34) scale(1.6)"/>
+    <text x="4" y="58" class="s">The pale "saddle" (clitellum) sits</text>
+    <text x="4" y="61.5" class="s">about a third along the worm. It</text>
+    <text x="4" y="65" class="s">makes cocoons for the worm's</text>
+    <text x="4" y="68.5" class="s">eggs.</text>
+  </g>
+  <!-- r1c4 finished -->
+  <g transform="translate(148.5,0)">
+    <text x="4" y="9" class="t" font-size="4.2">Finished!</text><text x="4" y="13" class="s">the same pieces, assembled</text>
+    <rect class="soil" x="4" y="24" width="42" height="54" rx="4" opacity="0.5"/>
+    <g transform="translate(25,50)">
+      <use href="#front" class="worm cut" transform="translate(2,-11) rotate(10) scale(0.62)"/>
+      <use href="#frings" transform="translate(2,-11) rotate(10) scale(0.62)"/>
+      <use href="#rear" class="worm cut" transform="translate(-2,13) rotate(-10) scale(0.62)"/>
+      <use href="#rrings" transform="translate(-2,13) rotate(-10) scale(0.62)"/>
+      <use href="#saddle" class="sad cut" transform="translate(0,1) rotate(-6) scale(0.62)"/>
+    </g>
+    <text x="24.75" y="86" text-anchor="middle" class="s">curve it into an S · saddle over the join · ≈ 12 × 4 cm</text>
+  </g>
+  <!-- r1c5 real thing -->
+  <g transform="translate(198,0)">
+    <text x="4" y="9" class="t" font-size="4.2">The real thing</text>
+    <image xlink:href="_thumb.jpg" href="_thumb.jpg" x="5" y="13" width="39.5" height="26" preserveAspectRatio="xMidYMid slice"/>
+    <rect x="5" y="13" width="39.5" height="26" fill="none" stroke="#c8c2b2" stroke-width="0.4"/>
+    <text x="4" y="47" class="b">Lumbricus terrestris —</text><text x="4" y="51" class="b">the Common Earthworm,</text><text x="4" y="55" class="b">a gardener's helper.</text>
+    <text x="4" y="64" class="s">Photo © Daniel Buczkiewicz,</text><text x="4" y="67.5" class="s">CC-BY, via iNaturalist. Found in</text>
+    <text x="4" y="71" class="s">Derbyshire — about 35 km</text><text x="4" y="74.5" class="s">from Manchester.</text>
+  </g>
+  <!-- r1c6 facts -->
+  <g transform="translate(247.5,0)">
+    <text x="4" y="9" class="t" font-size="4.2">Did you know?</text>
+    <text x="4" y="20" class="b">· No eyes, ears or bones —</text><text x="6" y="23.8" class="b">it breathes through its skin.</text>
+    <text x="4" y="33" class="b">· It eats its way through soil,</text><text x="6" y="36.8" class="b">recycling dead leaves.</text>
+    <text x="4" y="46" class="b">· Its tunnels let air and</text><text x="6" y="49.8" class="b">water into the ground.</text>
+    <text x="4" y="59" class="b">· Charles Darwin studied</text><text x="6" y="62.8" class="b">worms for 39 years!</text>
+    <text x="4" y="72" class="b">· Tiny bristles grip the soil</text><text x="6" y="75.8" class="b">so it can pull itself along.</text>
+  </g>
+
+  <!-- r2c1 how to make it -->
+  <g transform="translate(0,105)">
+    <text x="4" y="10" class="t" font-size="4.6">How to make it</text><text x="4" y="15" class="s">from your felt squares</text>
+    <text x="5" y="28" class="n">1</text><text x="11" y="27.5" class="i">Trace each shape onto</text><text x="11" y="31.7" class="i">the right felt colour.</text>
+    <text x="5" y="44" class="n">2</text><text x="11" y="43.5" class="i">Cut out all 3 pieces.</text>
+    <text x="5" y="55" class="n">3</text><text x="11" y="54.5" class="i">Build it on the mat →</text>
+    <text x="4" y="66" class="lbl">Felt squares you'll use:</text>
+    <rect class="cut worm" x="4" y="69" width="4.5" height="4.5" rx="0.9"/><text x="11" y="72.6" class="b">reddish brown — body</text>
+    <rect class="cut sad"  x="4" y="75" width="4.5" height="4.5" rx="0.9"/><text x="11" y="78.6" class="b">pale orange — saddle</text>
+    <text x="4" y="90" class="s">Brown soil mat/pouch is premade.</text>
+  </g>
+  <!-- r2c2 build it -->
+  <g transform="translate(49.5,105)">
+    <text x="4" y="10" class="t" font-size="4.6">Build it</text><text x="4" y="15" class="s">lay the pieces on the mat</text>
+    <text x="5" y="28" class="n">1</text><text x="11" y="27.5" class="i">Lay the brown mat down</text><text x="11" y="31.7" class="i">— that's the soil.</text>
+    <text x="5" y="44" class="n">2</text><text x="11" y="43.5" class="i">Place the front body,</text><text x="11" y="47.7" class="i">pointed head at the top.</text>
+    <text x="5" y="60" class="n">3</text><text x="11" y="59.5" class="i">Add the rear body below;</text><text x="11" y="63.7" class="i">curve them into an S.</text>
+    <text x="4" y="84" class="s">Nothing is fixed — the pieces</text><text x="4" y="87.5" class="s">just sit like a jigsaw.</text>
+  </g>
+  <!-- r2c3 and again -->
+  <g transform="translate(99,105)">
+    <text x="4" y="10" class="t" font-size="4.6">…and again</text><text x="4" y="15" class="s">it's a puzzle, not a glue-up</text>
+    <text x="5" y="28" class="n">4</text><text x="11" y="27.5" class="i">Lay the pale saddle over</text><text x="11" y="31.7" class="i">the join, a third along.</text>
+    <text x="5" y="44" class="n">5</text><text x="11" y="43.5" class="i">The rings show the worm's</text><text x="11" y="47.7" class="i">many little segments.</text>
+    <text x="5" y="60" class="n">6</text><text x="11" y="59.5" class="i">Done! Take it apart</text><text x="11" y="63.7" class="i">and build it all again.</text>
+    <text x="4" y="84" class="s">Wiggle it into any shape you</text><text x="4" y="87.5" class="s">like — worms are bendy!</text>
+  </g>
+  <!-- r2c4 at a glance -->
+  <g transform="translate(148.5,105)">
+    <text x="4" y="10" class="t" font-size="4.2">At a glance</text>
+    <text x="4" y="20" class="lbl">3 felt pieces</text>
+    <text x="6" y="27" class="b">· 1 front body (reddish brown)</text>
+    <text x="6" y="33" class="b">· 1 rear body (reddish brown)</text>
+    <text x="6" y="39" class="b">· 1 saddle (pale orange)</text>
+    <text x="4" y="50" class="lbl">Finished size</text><text x="6" y="57" class="b">≈ 12 × 4 cm</text>
+    <text x="4" y="68" class="s">The simplest kit in the set —</text><text x="4" y="71.5" class="s">a great first fuzzle.</text>
+    <text x="4" y="80" class="s">Theme: Underground. Collect the</text><text x="4" y="83.5" class="s">woodlouse, earthworm and ant.</text>
+  </g>
+  <!-- r2c5 cover -->
+  <g transform="translate(198,105)">
+    <rect x="1.5" y="1.5" width="46.5" height="49.5" rx="3" fill="#ffffff" stroke="#e0d6c8" stroke-width="0.5"/>
+    <rect x="1.5" y="1.5" width="46.5" height="3" rx="1.5" fill="#8a6a3a"/>
+    <image xlink:href="_giw-logo-t.png" href="_giw-logo-t.png" x="12" y="7" width="25.5" height="18.9" preserveAspectRatio="xMidYMid meet"/>
+    <text x="24.75" y="31" text-anchor="middle" class="b" font-size="3.2">Make your own</text>
+    <text x="24.75" y="38.5" text-anchor="middle" class="t" font-size="4.8">Earthworm</text>
+    <line x1="18" y1="41.5" x2="31.5" y2="41.5" stroke="#ded2c0" stroke-width="0.5"/>
+    <text x="24.75" y="47.5" text-anchor="middle" class="t" font-size="4.6" fill="#8a6a3a">Instructions</text>
+    <text x="24.75" y="63" text-anchor="middle" class="b">A Giant Insect World felt puzzle</text>
+    <text x="24.75" y="67.5" text-anchor="middle" class="s">build it · take it apart · build it again</text>
+    <g transform="translate(24.75,84)">
+      <use href="#front" class="worm" transform="translate(3,-5) rotate(70) scale(0.42)"/>
+      <use href="#rear" class="worm" transform="translate(-4,4) rotate(105) scale(0.42)"/>
+      <use href="#saddle" class="sad" transform="translate(0,-1) rotate(80) scale(0.5)"/>
+    </g>
+  </g>
+  <!-- r2c6 back -->
+  <g transform="translate(247.5,105)">
+    <text x="24.75" y="17" text-anchor="middle" class="t" font-size="7" fill="#8a6a3a">FuzzleWorld</text>
+    <text x="24.75" y="22.5" text-anchor="middle" class="s">downloadable felt puzzle kits</text>
+    <text x="24.75" y="39" text-anchor="middle" class="t" font-size="3.8">Collect the set</text>
+    <text x="24.75" y="48" text-anchor="middle" class="b">Meadow · Aquatic · Underground</text>
+    <text x="24.75" y="58" text-anchor="middle" class="s">woodlouse · earthworm · ant</text>
+    <text x="24.75" y="61.5" text-anchor="middle" class="s">butterfly · dragonfly · more…</text>
+    <text x="24.75" y="86" text-anchor="middle" class="s">Species: L. terrestris · Photo ©</text>
+    <text x="24.75" y="89.5" text-anchor="middle" class="s">Daniel Buczkiewicz, CC-BY · Logo</text>
+    <text x="24.75" y="93" text-anchor="middle" class="s">© Giant Insect World</text>
+  </g>
+
+  <g stroke="#c2ac90" stroke-width="0.5" fill="none">
+    <line x1="49.5" y1="0" x2="49.5" y2="5"/><line x1="49.5" y1="205" x2="49.5" y2="210"/>
+    <line x1="99" y1="0" x2="99" y2="5"/><line x1="99" y1="205" x2="99" y2="210"/>
+    <line x1="148.5" y1="0" x2="148.5" y2="5"/><line x1="148.5" y1="205" x2="148.5" y2="210"/>
+    <line x1="198" y1="0" x2="198" y2="5"/><line x1="198" y1="205" x2="198" y2="210"/>
+    <line x1="247.5" y1="0" x2="247.5" y2="5"/><line x1="247.5" y1="205" x2="247.5" y2="210"/>
+    <line x1="0" y1="105" x2="5" y2="105"/><line x1="292" y1="105" x2="297" y2="105"/>
+  </g>
+  <rect x="0.4" y="0.4" width="296.2" height="209.2" fill="none" stroke="#d7d7d7" stroke-width="0.4"/>
+  <text x="4" y="208.4" class="s" fill="#b3b3b3" font-size="1.9">Print A4 landscape at 100% (actual size) · fold into 6 × 2 where the edge marks line up · cover = top half of row 2, column 5</text>
+</svg>

@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="297mm" height="210mm" viewBox="0 0 297 210">
+  <!--
+    FuzzleWorld × Giant Insect World — Meadow Grasshopper felt puzzle. A4 landscape, 6x2. Pieces actual size, may cross folds.
+    Finished built from the same defs. Bottom text on shared grid. Fold ticks at edges. Logo bg removed.
+    Photo © Susan Marley (Dunham Massey), CC-BY, via iNaturalist. Logo © Giant Insect World.
+  -->
+  <style>
+    .t{font-family:'Nunito ExtraBold',sans-serif;fill:#3a4a2b;} .n{font-family:'Nunito ExtraBold',sans-serif;fill:#5a8a3a;font-size:4.2px;}
+    .lbl{font-family:'Nunito ExtraBold',sans-serif;fill:#3a4a2b;font-size:2.9px;}
+    .b{font-family:'Source Serif 4',serif;fill:#333;font-size:2.8px;} .s{font-family:'Source Serif 4',serif;fill:#666;font-size:2.3px;}
+    .i{font-family:'Source Serif 4',serif;fill:#2b2b2b;font-size:3.3px;} .cut{stroke:#1c1c1c;stroke-width:0.45;}
+    .grn{fill:#7fae4b;} .tan{fill:#c9b285;} .black{fill:#201b18;} .green{fill:#9cb86a;}
+  </style>
+  <defs>
+    <path id="body" d="M3 -4 C 3 -9 7 -11 12 -11 C 16 -11 19 -8 20 -5 C 29 -6 38 -4 45 -1 C 47 0 47 2 45 3 C 38 6 29 8 20 7 C 19 10 16 12 12 12 C 7 12 3 10 3 5 C 2 3 2 -2 3 -4 Z"/>
+    <path id="wing" d="M0 0 C 9 -3 22 -4 33 -3 C 36 -2.5 37 -1 36 0.3 C 33 2 22 2.6 9 2.6 C 3 2.6 0 1.3 0 0 Z"/>
+    <path id="femur" d="M0 0 C 8 -1 16 1.5 21 6.5 C 24 9.5 24.5 13.5 21.5 15.5 C 20 13.5 17 10 13 7.5 C 8 4.5 3 2.8 0 2.8 C -1 1.8 -1 1 0 0 Z"/>
+    <path id="tibia" d="M0 0 C -5 4.5 -11 10 -17 16.5 L -15.6 17.6 C -9.5 11 -3.5 5.5 1.4 1.2 Z"/>
+    <path id="leg" d="M0 0 C -2 4.5 -3 9 -3 13.5 L -1.6 13.5 C -1.6 9 -0.6 4.5 1.4 0.2 Z"/>
+    <path id="ant" d="M0 0 C 4 -5 9 -9 15 -12 L 15.6 -10.8 C 9.8 -7.8 5 -3.8 1.2 1 Z"/>
+  </defs>
+  <rect x="0" y="0" width="297" height="210" fill="#ffffff"/>
+
+  <!-- r1c1 body -->
+  <g transform="translate(0,0)">
+    <text x="4" y="9" class="t" font-size="4">Body ×1</text><text x="4" y="13" class="s">green · head, thorax &amp; abdomen · actual size</text>
+    <use href="#body" class="cut grn" transform="translate(2,45) scale(1.15)"/>
+    <text x="4" y="72" class="s">the rounded head is on the left</text>
+  </g>
+  <!-- r1c2 wing + hind leg -->
+  <g transform="translate(49.5,0)">
+    <text x="4" y="9" class="t" font-size="4">Wing &amp; hind leg</text><text x="4" y="13" class="s">actual size</text>
+    <use href="#wing" class="cut tan" transform="translate(5,24) scale(1.15)"/>
+    <text x="4" y="34" class="s">wing ×1 · tan (lies along the back)</text>
+    <use href="#femur" class="cut grn" transform="translate(6,44) scale(1.2)"/>
+    <text x="4" y="70" class="s">hind femur ×1 · green (the big thigh)</text>
+    <use href="#tibia" class="cut grn" transform="translate(30,80) scale(1.2)"/>
+    <text x="4" y="90" class="s">hind tibia ×1 · green (thin lower leg)</text>
+  </g>
+  <!-- r1c3 front legs + eye + antennae -->
+  <g transform="translate(99,0)">
+    <text x="4" y="9" class="t" font-size="4">Legs, eye,</text><text x="4" y="14" class="t" font-size="4">antennae</text>
+    <use href="#leg" class="cut grn" transform="translate(10,24) scale(1.2)"/>
+    <use href="#leg" class="cut grn" transform="translate(18,24) scale(1.2)"/>
+    <text x="4" y="46" class="s">front legs ×2 · green</text>
+    <circle class="cut black" cx="10" cy="56" r="2.2"/>
+    <text x="16" y="57" class="s">eye ×1 · black</text>
+    <use href="#ant" class="cut grn" transform="translate(8,80) scale(1.2)"/>
+    <use href="#ant" class="cut grn" transform="translate(15,80) scale(1.2)"/>
+    <text x="4" y="88" class="s">antennae ×2 · green (long &amp; thin)</text>
+  </g>
+  <!-- r1c4 finished -->
+  <g transform="translate(148.5,0)">
+    <text x="4" y="9" class="t" font-size="4.2">Finished!</text><text x="4" y="13" class="s">the same pieces, assembled</text>
+    <rect class="green" x="4" y="24" width="42" height="54" rx="4" opacity="0.6"/>
+    <g transform="translate(25,54)">
+      <!-- front legs -->
+      <use href="#leg" class="grn cut" transform="translate(-6,4) scale(0.9)"/>
+      <use href="#leg" class="grn cut" transform="translate(-2,4) scale(0.9)"/>
+      <!-- hind leg -->
+      <use href="#femur" class="grn cut" transform="translate(3,-2) scale(0.95)"/>
+      <use href="#tibia" class="grn cut" transform="translate(24,12) scale(0.95)"/>
+      <!-- body (head left) -->
+      <use href="#body" class="grn cut" transform="translate(-19,0) scale(0.95)"/>
+      <!-- wing over back -->
+      <use href="#wing" class="tan cut" transform="translate(-4,-8) scale(0.95)"/>
+      <!-- eye + antennae -->
+      <circle class="black" cx="-15" cy="-4" r="1.5"/>
+      <use href="#ant" class="grn" transform="translate(-16,-6) scale(0.85)"/>
+      <use href="#ant" class="grn" transform="translate(-14,-6) scale(0.85)"/>
+    </g>
+    <text x="24.75" y="86" text-anchor="middle" class="s">head left · big hind leg bent like a Z · ≈ 11 × 6 cm</text>
+  </g>
+  <!-- r1c5 real thing -->
+  <g transform="translate(198,0)">
+    <text x="4" y="9" class="t" font-size="4.2">The real thing</text>
+    <image xlink:href="_thumb.jpg" href="_thumb.jpg" x="5" y="13" width="39.5" height="26" preserveAspectRatio="xMidYMid slice"/>
+    <rect x="5" y="13" width="39.5" height="26" fill="none" stroke="#c8c2b2" stroke-width="0.4"/>
+    <text x="4" y="47" class="b">Pseudochorthippus</text><text x="4" y="51" class="b">parallelus — the Meadow</text><text x="4" y="55" class="b">Grasshopper.</text>
+    <text x="4" y="64" class="s">Photo © Susan Marley, CC-BY,</text><text x="4" y="67.5" class="s">via iNaturalist. Photographed at</text>
+    <text x="4" y="71" class="s">Dunham Massey — about</text><text x="4" y="74.5" class="s">13 km from Manchester.</text>
+  </g>
+  <!-- r1c6 facts -->
+  <g transform="translate(247.5,0)">
+    <text x="4" y="9" class="t" font-size="4.2">Did you know?</text>
+    <text x="4" y="20" class="b">· It "sings" by rubbing its</text><text x="6" y="23.8" class="b">legs against its wings.</text>
+    <text x="4" y="33" class="b">· Its big back legs can jump</text><text x="6" y="36.8" class="b">20× its own body length.</text>
+    <text x="4" y="46" class="b">· Green or brown, to hide</text><text x="6" y="49.8" class="b">among the grass.</text>
+    <text x="4" y="59" class="b">· Listen for its soft "rrr-rrr"</text><text x="6" y="62.8" class="b">on warm summer days.</text>
+    <text x="4" y="72" class="b">· It eats grass and basks</text><text x="6" y="75.8" class="b">in the sun.</text>
+  </g>
+
+  <!-- r2c1 how to make it -->
+  <g transform="translate(0,105)">
+    <text x="4" y="10" class="t" font-size="4.6">How to make it</text><text x="4" y="15" class="s">from your felt squares</text>
+    <text x="5" y="28" class="n">1</text><text x="11" y="27.5" class="i">Trace each shape onto</text><text x="11" y="31.7" class="i">the right felt colour.</text>
+    <text x="5" y="44" class="n">2</text><text x="11" y="43.5" class="i">Cut out all 9 pieces.</text>
+    <text x="5" y="55" class="n">3</text><text x="11" y="54.5" class="i">Build it on the mat →</text>
+    <text x="4" y="66" class="lbl">Felt squares you'll use:</text>
+    <rect class="cut grn"  x="4" y="69" width="4.5" height="4.5" rx="0.9"/><text x="11" y="72.6" class="b">green — body, legs, antennae</text>
+    <rect class="cut tan"  x="4" y="75" width="4.5" height="4.5" rx="0.9"/><text x="11" y="78.6" class="b">tan — wing</text>
+    <rect class="cut black" x="4" y="81" width="4.5" height="4.5" rx="0.9"/><text x="11" y="84.6" class="b">black — eye</text>
+    <text x="4" y="95" class="s">Green meadow mat/pouch is premade.</text>
+  </g>
+  <!-- r2c2 build it -->
+  <g transform="translate(49.5,105)">
+    <text x="4" y="10" class="t" font-size="4.6">Build it</text><text x="4" y="15" class="s">lay the pieces on the mat</text>
+    <text x="5" y="28" class="n">1</text><text x="11" y="27.5" class="i">Lay the green mat down</text><text x="11" y="31.7" class="i">— that's your meadow.</text>
+    <text x="5" y="44" class="n">2</text><text x="11" y="43.5" class="i">Place the body, head to</text><text x="11" y="47.7" class="i">the left; wing on its back.</text>
+    <text x="5" y="60" class="n">3</text><text x="11" y="59.5" class="i">Add the big hind leg:</text><text x="11" y="63.7" class="i">femur, then thin tibia.</text>
+    <text x="4" y="84" class="s">Nothing is fixed — the pieces</text><text x="4" y="87.5" class="s">just sit like a jigsaw.</text>
+  </g>
+  <!-- r2c3 and again -->
+  <g transform="translate(99,105)">
+    <text x="4" y="10" class="t" font-size="4.6">…and again</text><text x="4" y="15" class="s">it's a puzzle, not a glue-up</text>
+    <text x="5" y="28" class="n">4</text><text x="11" y="27.5" class="i">Add the 2 front legs</text><text x="11" y="31.7" class="i">under the body.</text>
+    <text x="5" y="44" class="n">5</text><text x="11" y="43.5" class="i">Add the eye and the</text><text x="11" y="47.7" class="i">2 long antennae.</text>
+    <text x="5" y="60" class="n">6</text><text x="11" y="59.5" class="i">Done! Take it apart</text><text x="11" y="63.7" class="i">and build it all again.</text>
+    <text x="4" y="84" class="s">Bend the hind leg into a Z</text><text x="4" y="87.5" class="s">— ready to spring!</text>
+  </g>
+  <!-- r2c4 at a glance -->
+  <g transform="translate(148.5,105)">
+    <text x="4" y="10" class="t" font-size="4.2">At a glance</text>
+    <text x="4" y="20" class="lbl">9 felt pieces</text>
+    <text x="6" y="27" class="b">· 1 body (green)</text><text x="6" y="33" class="b">· 1 wing (tan)</text>
+    <text x="6" y="39" class="b">· 1 hind femur + 1 tibia (green)</text><text x="6" y="45" class="b">· 2 front legs (green)</text>
+    <text x="6" y="51" class="b">· 1 eye (black) + 2 antennae (green)</text>
+    <text x="4" y="62" class="lbl">Finished size</text><text x="6" y="69" class="b">≈ 11 × 6 cm</text>
+    <text x="4" y="80" class="s">Theme: Meadow. Collect the</text><text x="4" y="83.5" class="s">butterfly, ladybird and grasshopper.</text>
+  </g>
+  <!-- r2c5 cover -->
+  <g transform="translate(198,105)">
+    <rect x="1.5" y="1.5" width="46.5" height="49.5" rx="3" fill="#ffffff" stroke="#dfe4d8" stroke-width="0.5"/>
+    <rect x="1.5" y="1.5" width="46.5" height="3" rx="1.5" fill="#5a8a3a"/>
+    <image xlink:href="_giw-logo-t.png" href="_giw-logo-t.png" x="12" y="7" width="25.5" height="18.9" preserveAspectRatio="xMidYMid meet"/>
+    <text x="24.75" y="31" text-anchor="middle" class="b" font-size="3.2">Make your own</text>
+    <text x="24.75" y="38.5" text-anchor="middle" class="t" font-size="4.8">Grasshopper</text>
+    <line x1="18" y1="41.5" x2="31.5" y2="41.5" stroke="#cdd6c4" stroke-width="0.5"/>
+    <text x="24.75" y="47.5" text-anchor="middle" class="t" font-size="4.6" fill="#5a8a3a">Instructions</text>
+    <text x="24.75" y="63" text-anchor="middle" class="b">A Giant Insect World felt puzzle</text>
+    <text x="24.75" y="67.5" text-anchor="middle" class="s">build it · take it apart · build it again</text>
+    <g transform="translate(24.75,84)">
+      <use href="#body" class="grn" transform="translate(-13,-3) scale(0.5)"/>
+      <use href="#femur" class="grn" transform="translate(0,-3) scale(0.5)"/>
+      <use href="#tibia" class="grn" transform="translate(11,3) scale(0.5)"/>
+    </g>
+  </g>
+  <!-- r2c6 back -->
+  <g transform="translate(247.5,105)">
+    <text x="24.75" y="17" text-anchor="middle" class="t" font-size="7" fill="#5a8a3a">FuzzleWorld</text>
+    <text x="24.75" y="22.5" text-anchor="middle" class="s">downloadable felt puzzle kits</text>
+    <text x="24.75" y="39" text-anchor="middle" class="t" font-size="3.8">Collect the set</text>
+    <text x="24.75" y="48" text-anchor="middle" class="b">Meadow · Aquatic · Underground</text>
+    <text x="24.75" y="58" text-anchor="middle" class="s">butterfly · ladybird · grasshopper</text>
+    <text x="24.75" y="61.5" text-anchor="middle" class="s">river skater · dragonfly · more…</text>
+    <text x="24.75" y="86" text-anchor="middle" class="s">Species: P. parallelus · Photo ©</text>
+    <text x="24.75" y="89.5" text-anchor="middle" class="s">Susan Marley, CC-BY · Logo ©</text>
+    <text x="24.75" y="93" text-anchor="middle" class="s">Giant Insect World</text>
+  </g>
+
+  <g stroke="#aeb6a6" stroke-width="0.5" fill="none">
+    <line x1="49.5" y1="0" x2="49.5" y2="5"/><line x1="49.5" y1="205" x2="49.5" y2="210"/>
+    <line x1="99" y1="0" x2="99" y2="5"/><line x1="99" y1="205" x2="99" y2="210"/>
+    <line x1="148.5" y1="0" x2="148.5" y2="5"/><line x1="148.5" y1="205" x2="148.5" y2="210"/>
+    <line x1="198" y1="0" x2="198" y2="5"/><line x1="198" y1="205" x2="198" y2="210"/>
+    <line x1="247.5" y1="0" x2="247.5" y2="5"/><line x1="247.5" y1="205" x2="247.5" y2="210"/>
+    <line x1="0" y1="105" x2="5" y2="105"/><line x1="292" y1="105" x2="297" y2="105"/>
+  </g>
+  <rect x="0.4" y="0.4" width="296.2" height="209.2" fill="none" stroke="#d7d7d7" stroke-width="0.4"/>
+  <text x="4" y="208.4" class="s" fill="#b3b3b3" font-size="1.9">Print A4 landscape at 100% (actual size) · fold into 6 × 2 where the edge marks line up · cover = top half of row 2, column 5</text>
+</svg>

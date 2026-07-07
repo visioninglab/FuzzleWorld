@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="297mm" height="210mm" viewBox="0 0 297 210">
+  <!--
+    FuzzleWorld × Giant Insect World — Black Garden Ant felt puzzle. A4 landscape, 6x2. Pieces actual size, may cross folds.
+    Finished from same defs. Bottom text on shared grid. Fold ticks. Logo bg removed.
+    Photo © Alfie Felton (Rochdale), CC-BY, via iNaturalist. Logo © Giant Insect World.
+  -->
+  <style>
+    .t{font-family:'Nunito ExtraBold',sans-serif;fill:#3d3326;} .n{font-family:'Nunito ExtraBold',sans-serif;fill:#8a6a3a;font-size:4.2px;}
+    .lbl{font-family:'Nunito ExtraBold',sans-serif;fill:#3d3326;font-size:2.9px;}
+    .b{font-family:'Source Serif 4',serif;fill:#333;font-size:2.8px;} .s{font-family:'Source Serif 4',serif;fill:#666;font-size:2.3px;}
+    .i{font-family:'Source Serif 4',serif;fill:#2b2b2b;font-size:3.3px;} .cut{stroke:#3a3a3a;stroke-width:0.4;}
+    .blk{fill:#28241f;} .soil{fill:#a3805a;}
+  </style>
+  <defs>
+    <path id="head" d="M0 -6.5 C 4.5 -6.5 7.5 -3.5 7.5 0.5 C 7.5 4 4.5 6.5 0 7 C -4.5 6.5 -7.5 4 -7.5 0.5 C -7.5 -3.5 -4.5 -6.5 0 -6.5 Z"/>
+    <path id="thorax" d="M0 -8 C 3.6 -8 5.2 -4 5.2 1 C 5.2 6 4 10 0 10 C -4 10 -5.2 6 -5.2 1 C -5.2 -4 -3.6 -8 0 -8 Z"/>
+    <path id="gaster" d="M0 -9.5 C 6.5 -9.5 11 -4.5 11 2 C 11 8.5 6.5 13 0 13 C -6.5 13 -11 8.5 -11 2 C -11 -4.5 -6.5 -9.5 0 -9.5 Z"/>
+    <path id="leg" d="M0 0 C 5 1 9.5 3 12 7 C 13 9 13 11.5 14 14 L 12.8 14.4 C 11.8 12 10.8 9.6 8.6 7.2 C 6.2 4.4 3 2.2 0 1.6 Z"/>
+    <path id="ant" d="M0 0 C 3.5 -2 6.5 -3.2 8.5 -6.2 C 9.6 -7.8 10.6 -9.6 12.6 -10.8 L 13.4 -9.7 C 11.6 -8.5 10.6 -6.8 9.5 -5 C 7.4 -1.8 4.2 0.2 1.2 1.6 Z"/>
+  </defs>
+  <rect x="0" y="0" width="297" height="210" fill="#ffffff"/>
+
+  <!-- r1c1 body parts -->
+  <g transform="translate(0,0)">
+    <text x="4" y="9" class="t" font-size="4">Body ×3</text><text x="4" y="13" class="s">black · head, thorax, gaster · actual size</text>
+    <use href="#head" class="cut blk" transform="translate(24,26) scale(1.15)"/>
+    <text x="4" y="40" class="s">head ×1</text>
+    <use href="#thorax" class="cut blk" transform="translate(24,54) scale(1.15)"/>
+    <text x="4" y="70" class="s">thorax ×1 (the middle)</text>
+    <use href="#gaster" class="cut blk" transform="translate(24,84) scale(1.15)"/>
+    <text x="34" y="86" class="s">gaster ×1 (big rear)</text>
+  </g>
+  <!-- r1c2 legs -->
+  <g transform="translate(49.5,0)">
+    <text x="4" y="9" class="t" font-size="4">Legs ×6</text><text x="4" y="13" class="s">black · actual size · 3 each side</text>
+    <use href="#leg" class="cut blk" transform="translate(8,20) scale(1.1)"/>
+    <use href="#leg" class="cut blk" transform="translate(8,38) scale(1.1)"/>
+    <use href="#leg" class="cut blk" transform="translate(8,56) scale(1.1)"/>
+    <use href="#leg" class="cut blk" transform="translate(30,20) scale(-1.1,1.1)"/>
+    <use href="#leg" class="cut blk" transform="translate(30,38) scale(-1.1,1.1)"/>
+    <use href="#leg" class="cut blk" transform="translate(30,56) scale(-1.1,1.1)"/>
+    <text x="4" y="82" class="s">bent in the middle, like a real ant leg</text>
+  </g>
+  <!-- r1c3 antennae -->
+  <g transform="translate(99,0)">
+    <text x="4" y="9" class="t" font-size="4">Antennae ×2</text><text x="4" y="13" class="s">black · actual size</text>
+    <use href="#ant" class="cut blk" transform="translate(8,30) scale(1.2)"/>
+    <use href="#ant" class="cut blk" transform="translate(8,44) scale(1.2)"/>
+    <text x="4" y="58" class="s">An ant has three body parts:</text>
+    <text x="4" y="61.5" class="s">head, thorax and gaster, joined</text>
+    <text x="4" y="65" class="s">by a thin waist. Leave a little</text>
+    <text x="4" y="68.5" class="s">gap between them.</text>
+  </g>
+  <!-- r1c4 finished -->
+  <g transform="translate(148.5,0)">
+    <text x="4" y="9" class="t" font-size="4.2">Finished!</text><text x="4" y="13" class="s">the same pieces, assembled</text>
+    <rect class="soil" x="4" y="24" width="42" height="54" rx="4" opacity="0.5"/>
+    <g transform="translate(25,52)">
+      <!-- legs from thorax -->
+      <g id="rlegs">
+        <use href="#leg" class="blk cut" transform="translate(2,-7) rotate(-34) scale(0.55)"/>
+        <use href="#leg" class="blk cut" transform="translate(2,-4) rotate(6) scale(0.55)"/>
+        <use href="#leg" class="blk cut" transform="translate(2,-1) rotate(40) scale(0.55)"/>
+      </g>
+      <use href="#rlegs" transform="scale(-1,1)"/>
+      <!-- gaster (rear) -->
+      <use href="#gaster" class="blk cut" transform="translate(0,9) scale(0.6)"/>
+      <!-- thorax -->
+      <use href="#thorax" class="blk cut" transform="translate(0,-3) scale(0.55)"/>
+      <!-- head -->
+      <use href="#head" class="blk cut" transform="translate(0,-13) scale(0.58)"/>
+      <!-- antennae -->
+      <use href="#ant" class="blk" transform="translate(1,-15) rotate(-8) scale(0.6)"/>
+      <use href="#ant" class="blk" transform="translate(-1,-15) rotate(8) scale(-0.6,0.6)"/>
+    </g>
+    <text x="24.75" y="86" text-anchor="middle" class="s">3 body parts in a line · thin waist · 6 legs · ≈ 8 × 5 cm</text>
+  </g>
+  <!-- r1c5 real thing -->
+  <g transform="translate(198,0)">
+    <text x="4" y="9" class="t" font-size="4.2">The real thing</text>
+    <image xlink:href="_thumb.jpg" href="_thumb.jpg" x="5" y="13" width="39.5" height="26" preserveAspectRatio="xMidYMid slice"/>
+    <rect x="5" y="13" width="39.5" height="26" fill="none" stroke="#c8c2b2" stroke-width="0.4"/>
+    <text x="4" y="47" class="b">Lasius niger — the Black</text><text x="4" y="51" class="b">Garden Ant, in gardens</text><text x="4" y="55" class="b">and paths everywhere.</text>
+    <text x="4" y="64" class="s">Photo © Alfie Felton, CC-BY,</text><text x="4" y="67.5" class="s">via iNaturalist. Photographed at</text>
+    <text x="4" y="71" class="s">Rochdale — about 20 km</text><text x="4" y="74.5" class="s">from Manchester.</text>
+  </g>
+  <!-- r1c6 facts -->
+  <g transform="translate(247.5,0)">
+    <text x="4" y="9" class="t" font-size="4.2">Did you know?</text>
+    <text x="4" y="20" class="b">· Ants live in huge colonies</text><text x="6" y="23.8" class="b">ruled by one big queen.</text>
+    <text x="4" y="33" class="b">· They "talk" with smells</text><text x="6" y="36.8" class="b">and little touches.</text>
+    <text x="4" y="46" class="b">· An ant can lift 50× its</text><text x="6" y="49.8" class="b">own body weight.</text>
+    <text x="4" y="59" class="b">· On warm days, winged ants</text><text x="6" y="62.8" class="b">fly off to start new nests.</text>
+    <text x="4" y="72" class="b">· Its 3 parts: head, thorax</text><text x="6" y="75.8" class="b">and gaster (the big rear).</text>
+  </g>
+
+  <!-- r2c1 how to make it -->
+  <g transform="translate(0,105)">
+    <text x="4" y="10" class="t" font-size="4.6">How to make it</text><text x="4" y="15" class="s">from your felt squares</text>
+    <text x="5" y="28" class="n">1</text><text x="11" y="27.5" class="i">Trace each shape onto</text><text x="11" y="31.7" class="i">the black felt.</text>
+    <text x="5" y="44" class="n">2</text><text x="11" y="43.5" class="i">Cut out all 11 pieces.</text>
+    <text x="5" y="55" class="n">3</text><text x="11" y="54.5" class="i">Build it on the mat →</text>
+    <text x="4" y="66" class="lbl">Felt squares you'll use:</text>
+    <rect class="cut blk" x="4" y="69" width="4.5" height="4.5" rx="0.9"/><text x="11" y="72.6" class="b">black — the whole ant</text>
+    <text x="4" y="83" class="s">Just one colour — the simplest</text>
+    <text x="4" y="86.5" class="s">felt shopping list in the set!</text>
+    <text x="4" y="94" class="s">Brown soil mat/pouch is premade.</text>
+  </g>
+  <!-- r2c2 build it -->
+  <g transform="translate(49.5,105)">
+    <text x="4" y="10" class="t" font-size="4.6">Build it</text><text x="4" y="15" class="s">lay the pieces on the mat</text>
+    <text x="5" y="28" class="n">1</text><text x="11" y="27.5" class="i">Lay the brown mat down</text><text x="11" y="31.7" class="i">— that's the soil.</text>
+    <text x="5" y="44" class="n">2</text><text x="11" y="43.5" class="i">Place head, thorax and</text><text x="11" y="47.7" class="i">gaster in a line — leave</text><text x="11" y="51.9" class="i">a thin waist between.</text>
+    <text x="5" y="60" class="n">3</text><text x="11" y="59.5" class="i">Add 6 legs from the</text><text x="11" y="63.7" class="i">thorax, 3 each side.</text>
+    <text x="4" y="84" class="s">Nothing is fixed — the pieces</text><text x="4" y="87.5" class="s">just sit like a jigsaw.</text>
+  </g>
+  <!-- r2c3 and again -->
+  <g transform="translate(99,105)">
+    <text x="4" y="10" class="t" font-size="4.6">…and again</text><text x="4" y="15" class="s">it's a puzzle, not a glue-up</text>
+    <text x="5" y="28" class="n">4</text><text x="11" y="27.5" class="i">Add 2 bent antennae</text><text x="11" y="31.7" class="i">on top of the head.</text>
+    <text x="5" y="44" class="n">5</text><text x="11" y="43.5" class="i">Spread the legs so it</text><text x="11" y="47.7" class="i">looks ready to march.</text>
+    <text x="5" y="60" class="n">6</text><text x="11" y="59.5" class="i">Done! Take it apart</text><text x="11" y="63.7" class="i">and build it all again.</text>
+    <text x="4" y="84" class="s">Make a whole colony and line</text><text x="4" y="87.5" class="s">them up in a trail!</text>
+  </g>
+  <!-- r2c4 at a glance -->
+  <g transform="translate(148.5,105)">
+    <text x="4" y="10" class="t" font-size="4.2">At a glance</text>
+    <text x="4" y="20" class="lbl">11 felt pieces</text>
+    <text x="6" y="27" class="b">· 1 head (black)</text>
+    <text x="6" y="33" class="b">· 1 thorax (black)</text>
+    <text x="6" y="39" class="b">· 1 gaster (black)</text>
+    <text x="6" y="45" class="b">· 6 legs (black)</text>
+    <text x="6" y="51" class="b">· 2 antennae (black)</text>
+    <text x="4" y="62" class="lbl">Finished size</text><text x="6" y="69" class="b">≈ 8 × 5 cm</text>
+    <text x="4" y="80" class="s">Theme: Underground. Collect the</text><text x="4" y="83.5" class="s">woodlouse, earthworm and ant.</text>
+  </g>
+  <!-- r2c5 cover -->
+  <g transform="translate(198,105)">
+    <rect x="1.5" y="1.5" width="46.5" height="49.5" rx="3" fill="#ffffff" stroke="#e0d6c8" stroke-width="0.5"/>
+    <rect x="1.5" y="1.5" width="46.5" height="3" rx="1.5" fill="#8a6a3a"/>
+    <image xlink:href="_giw-logo-t.png" href="_giw-logo-t.png" x="12" y="7" width="25.5" height="18.9" preserveAspectRatio="xMidYMid meet"/>
+    <text x="24.75" y="31" text-anchor="middle" class="b" font-size="3.2">Make your own</text>
+    <text x="24.75" y="38.5" text-anchor="middle" class="t" font-size="5.4">Ant</text>
+    <line x1="18" y1="41.5" x2="31.5" y2="41.5" stroke="#ded2c0" stroke-width="0.5"/>
+    <text x="24.75" y="47.5" text-anchor="middle" class="t" font-size="4.6" fill="#8a6a3a">Instructions</text>
+    <text x="24.75" y="63" text-anchor="middle" class="b">A Giant Insect World felt puzzle</text>
+    <text x="24.75" y="67.5" text-anchor="middle" class="s">build it · take it apart · build it again</text>
+    <g transform="translate(24.75,84)">
+      <g id="crlegs"><use href="#leg" class="blk" transform="translate(1,-3) rotate(-34) scale(0.3)"/><use href="#leg" class="blk" transform="translate(1,-1) rotate(6) scale(0.3)"/><use href="#leg" class="blk" transform="translate(1,1) rotate(40) scale(0.3)"/></g>
+      <use href="#crlegs" transform="scale(-1,1)"/>
+      <ellipse class="blk" cx="0" cy="5" rx="6" ry="7"/>
+      <ellipse class="blk" cx="0" cy="-2" rx="3" ry="4"/>
+      <ellipse class="blk" cx="0" cy="-8" rx="3.5" ry="3.5"/>
+    </g>
+  </g>
+  <!-- r2c6 back -->
+  <g transform="translate(247.5,105)">
+    <text x="24.75" y="17" text-anchor="middle" class="t" font-size="7" fill="#8a6a3a">FuzzleWorld</text>
+    <text x="24.75" y="22.5" text-anchor="middle" class="s">downloadable felt puzzle kits</text>
+    <text x="24.75" y="39" text-anchor="middle" class="t" font-size="3.8">Collect the set</text>
+    <text x="24.75" y="48" text-anchor="middle" class="b">Meadow · Aquatic · Underground</text>
+    <text x="24.75" y="58" text-anchor="middle" class="s">woodlouse · earthworm · ant</text>
+    <text x="24.75" y="61.5" text-anchor="middle" class="s">butterfly · dragonfly · more…</text>
+    <text x="24.75" y="86" text-anchor="middle" class="s">Species: L. niger · Photo © Alfie</text>
+    <text x="24.75" y="89.5" text-anchor="middle" class="s">Felton, CC-BY · Logo © Giant</text>
+    <text x="24.75" y="93" text-anchor="middle" class="s">Insect World</text>
+  </g>
+
+  <g stroke="#c2ac90" stroke-width="0.5" fill="none">
+    <line x1="49.5" y1="0" x2="49.5" y2="5"/><line x1="49.5" y1="205" x2="49.5" y2="210"/>
+    <line x1="99" y1="0" x2="99" y2="5"/><line x1="99" y1="205" x2="99" y2="210"/>
+    <line x1="148.5" y1="0" x2="148.5" y2="5"/><line x1="148.5" y1="205" x2="148.5" y2="210"/>
+    <line x1="198" y1="0" x2="198" y2="5"/><line x1="198" y1="205" x2="198" y2="210"/>
+    <line x1="247.5" y1="0" x2="247.5" y2="5"/><line x1="247.5" y1="205" x2="247.5" y2="210"/>
+    <line x1="0" y1="105" x2="5" y2="105"/><line x1="292" y1="105" x2="297" y2="105"/>
+  </g>
+  <rect x="0.4" y="0.4" width="296.2" height="209.2" fill="none" stroke="#d7d7d7" stroke-width="0.4"/>
+  <text x="4" y="208.4" class="s" fill="#b3b3b3" font-size="1.9">Print A4 landscape at 100% (actual size) · fold into 6 × 2 where the edge marks line up · cover = top half of row 2, column 5</text>
+</svg>

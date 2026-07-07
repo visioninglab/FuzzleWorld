@@ -1,0 +1,18 @@
+7-spot Ladybird (Coccinella septempunctata) — source image
+==========================================================
+
+Naming convention: <common-english>_<Latin-binomial>_<photographer>_<cc-requirement>.jpg
+
+File:         seven-spot-ladybird_Coccinella-septempunctata_Alfie-Felton_CC0.jpg
+Species:      Coccinella septempunctata (7-spot Ladybird / Seven-spotted Lady Beetle)
+Photographer: Alfie Felton (iNaturalist user: jaiiiiiiii_)
+Location:     Wardle, Rochdale, UK (~20 km N of Manchester — closest clear adult
+              7-spot with a CC licence; the nearer 8 km record was a larva)
+Source:       https://www.inaturalist.org/observations/219743725
+Photo:        https://inaturalist-open-data.s3.amazonaws.com/photos/388981019/original.jpeg
+
+Licence:      CC0 1.0 (public domain — no attribution required)
+              https://creativecommons.org/publicdomain/zero/1.0/
+
+Courtesy credit (used on the kit even though CC0 doesn't require it):
+  7-spot ladybird photo © Alfie Felton, CC0, via iNaturalist.
