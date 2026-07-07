@@ -40,6 +40,15 @@ Organised by habitat theme (each has its own premade mat colour):
 - **Common Earthworm** (*Lumbricus terrestris*)
 - **Black Garden Ant** (*Lasius niger*)
 
+## Files & formats
+
+- **`FuzzleWorld-all-kits.pdf`** — the whole collection as one 10-page booklet (intro + 9 kits). **Print-ready**: text is outlined, so it renders identically on any device/printer.
+- **`editable-pdfs/`** — the same pages with **text kept editable** and fonts embedded (better for importing into design tools like Canva). Includes per-kit PDFs and a combined `FuzzleWorld-all-kits-editable.pdf`.
+- **Per-kit `.svg`** (in each kit folder) — the **editable vector source**. Best for editing shapes/colours (e.g. Canva SVG upload / Magic layers). Fonts used: **Nunito** (headings) and **Source Serif 4** (body) — both free; add them in your editor for an exact match.
+- **Per-kit `.pdf`** (in each kit folder) — the individual print-ready sheet (outlined).
+
+Print any sheet at **100% / actual size** so the felt pieces come out true-to-size.
+
 ## Credits
 
 Reference photos are sourced from [iNaturalist](https://www.inaturalist.org) under CC0 / CC-BY licences, with the photographer credited in each image filename and in the kit's `SOURCE.txt`. Filename convention: `common-english_Latin-binomial_photographer_CC-requirement.jpg`.
