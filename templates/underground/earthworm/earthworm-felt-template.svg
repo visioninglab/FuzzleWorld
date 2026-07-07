@@ -127,10 +127,10 @@
     <text x="24.75" y="47.5" text-anchor="middle" class="t" font-size="4.6" fill="#8a6a3a">Instructions</text>
     <text x="24.75" y="63" text-anchor="middle" class="b">A Giant Insect World felt puzzle</text>
     <text x="24.75" y="67.5" text-anchor="middle" class="s">build it · take it apart · build it again</text>
-    <g transform="translate(24.75,84)">
-      <use href="#front" class="worm" transform="translate(3,-5) rotate(70) scale(0.42)"/>
-      <use href="#rear" class="worm" transform="translate(-4,4) rotate(105) scale(0.42)"/>
-      <use href="#saddle" class="sad" transform="translate(0,-1) rotate(80) scale(0.5)"/>
+    <g transform="translate(24.75,83) rotate(52) scale(0.34)">
+      <use href="#front" class="worm" transform="translate(2,-11) rotate(10)"/>
+      <use href="#rear" class="worm" transform="translate(-2,13) rotate(-10)"/>
+      <use href="#saddle" class="sad" transform="translate(0,1) rotate(-6)"/>
     </g>
   </g>
   <!-- r2c6 back -->

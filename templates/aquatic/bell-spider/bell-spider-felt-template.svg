@@ -14,7 +14,7 @@
   <defs>
     <path id="abdomen" d="M0 -13 C 8 -13 14 -7 14 2 C 14 10 8 15 0 15 C -8 15 -14 10 -14 2 C -14 -7 -8 -13 0 -13 Z"/>
     <path id="ceph" d="M0 -8 C 5 -8 8.5 -4 8.5 0.5 C 8.5 5 5 8 0 8 C -5 8 -8.5 5 -8.5 0.5 C -8.5 -4 -5 -8 0 -8 Z"/>
-    <path id="leg" d="M0 0 C 8 0.3 16 1 24 2.6 C 16 3.1 8 2.8 0 2.6 Z"/>
+    <path id="leg" d="M0 0 C 11 0.2 22 0.7 32 1.7 C 22 2.2 11 2 0 1.9 Z"/>
     <path id="bubble" d="M0 -15 C 10 -15 17 -8 17 1 C 17 11 10 18 0 18 C -10 18 -17 11 -17 1 C -17 -8 -10 -15 0 -15 Z"/>
   </defs>
   <rect x="0" y="0" width="297" height="210" fill="#ffffff"/>
@@ -56,10 +56,10 @@
     <g transform="translate(25,52)">
       <!-- legs (from cephalothorax) -->
       <g id="rlegs">
-        <use href="#leg" class="dk cut" transform="translate(1,-7) rotate(-42) scale(0.55)"/>
-        <use href="#leg" class="dk cut" transform="translate(1,-5) rotate(-14) scale(0.55)"/>
-        <use href="#leg" class="dk cut" transform="translate(1,-3) rotate(14) scale(0.55)"/>
-        <use href="#leg" class="dk cut" transform="translate(1,-1) rotate(44) scale(0.55)"/>
+        <use href="#leg" class="dk cut" transform="translate(1,-7) rotate(-54) scale(0.62)"/>
+        <use href="#leg" class="dk cut" transform="translate(1,-5) rotate(-22) scale(0.62)"/>
+        <use href="#leg" class="dk cut" transform="translate(1,-3) rotate(12) scale(0.62)"/>
+        <use href="#leg" class="dk cut" transform="translate(1,-1) rotate(46) scale(0.62)"/>
       </g>
       <use href="#rlegs" transform="scale(-1,1)"/>
       <!-- air bubble behind -->

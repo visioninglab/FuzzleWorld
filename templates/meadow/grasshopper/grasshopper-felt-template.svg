@@ -12,7 +12,7 @@
     .grn{fill:#7fae4b;} .tan{fill:#c9b285;} .black{fill:#201b18;} .green{fill:#9cb86a;}
   </style>
   <defs>
-    <path id="body" d="M3 -4 C 3 -9 7 -11 12 -11 C 16 -11 19 -8 20 -5 C 29 -6 38 -4 45 -1 C 47 0 47 2 45 3 C 38 6 29 8 20 7 C 19 10 16 12 12 12 C 7 12 3 10 3 5 C 2 3 2 -2 3 -4 Z"/>
+    <path id="body" d="M 2 -1 C 2 -5 4 -7 7 -7 C 10 -8 12 -9 16 -9 C 25 -8 34 -5.5 43 -1.5 C 45 -0.3 45 0.7 43 1.7 C 34 4.5 25 6 16 6 C 12 6 9 6 6 5 C 3.5 4.5 2 2.5 2 0 C 1.8 -0.3 1.8 -0.6 2 -1 Z"/>
     <path id="wing" d="M0 0 C 9 -3 22 -4 33 -3 C 36 -2.5 37 -1 36 0.3 C 33 2 22 2.6 9 2.6 C 3 2.6 0 1.3 0 0 Z"/>
     <path id="femur" d="M0 0 C 8 -1 16 1.5 21 6.5 C 24 9.5 24.5 13.5 21.5 15.5 C 20 13.5 17 10 13 7.5 C 8 4.5 3 2.8 0 2.8 C -1 1.8 -1 1 0 0 Z"/>
     <path id="tibia" d="M0 0 C -5 4.5 -11 10 -17 16.5 L -15.6 17.6 C -9.5 11 -3.5 5.5 1.4 1.2 Z"/>
@@ -24,8 +24,8 @@
   <!-- r1c1 body -->
   <g transform="translate(0,0)">
     <text x="4" y="9" class="t" font-size="4">Body ×1</text><text x="4" y="13" class="s">green · head, thorax &amp; abdomen · actual size</text>
-    <use href="#body" class="cut grn" transform="translate(2,45) scale(1.15)"/>
-    <text x="4" y="72" class="s">the rounded head is on the left</text>
+    <use href="#body" class="cut grn" transform="translate(2,48) scale(1.05)"/>
+    <text x="4" y="72" class="s">small head on the left, tapering tail on the right</text>
   </g>
   <!-- r1c2 wing + hind leg -->
   <g transform="translate(49.5,0)">
@@ -53,21 +53,21 @@
   <g transform="translate(148.5,0)">
     <text x="4" y="9" class="t" font-size="4.2">Finished!</text><text x="4" y="13" class="s">the same pieces, assembled</text>
     <rect class="green" x="4" y="24" width="42" height="54" rx="4" opacity="0.6"/>
-    <g transform="translate(25,54)">
+    <g transform="translate(24,54)">
+      <!-- hind leg (behind) -->
+      <use href="#femur" class="grn cut" transform="translate(-4,-3) scale(0.85)"/>
+      <use href="#tibia" class="grn cut" transform="translate(13,10) scale(0.85)"/>
       <!-- front legs -->
-      <use href="#leg" class="grn cut" transform="translate(-6,4) scale(0.9)"/>
-      <use href="#leg" class="grn cut" transform="translate(-2,4) scale(0.9)"/>
-      <!-- hind leg -->
-      <use href="#femur" class="grn cut" transform="translate(3,-2) scale(0.95)"/>
-      <use href="#tibia" class="grn cut" transform="translate(24,12) scale(0.95)"/>
+      <use href="#leg" class="grn cut" transform="translate(-8,4) scale(0.72)"/>
+      <use href="#leg" class="grn cut" transform="translate(-4,4) scale(0.72)"/>
       <!-- body (head left) -->
-      <use href="#body" class="grn cut" transform="translate(-19,0) scale(0.95)"/>
+      <use href="#body" class="grn cut" transform="translate(-20,0) scale(0.8)"/>
       <!-- wing over back -->
-      <use href="#wing" class="tan cut" transform="translate(-4,-8) scale(0.95)"/>
+      <use href="#wing" class="tan cut" transform="translate(-9,-6.5) scale(0.75)"/>
       <!-- eye + antennae -->
-      <circle class="black" cx="-15" cy="-4" r="1.5"/>
-      <use href="#ant" class="grn" transform="translate(-16,-6) scale(0.85)"/>
-      <use href="#ant" class="grn" transform="translate(-14,-6) scale(0.85)"/>
+      <circle class="black" cx="-16" cy="-2.6" r="1.3"/>
+      <use href="#ant" class="grn" transform="translate(-17,-4) scale(0.72)"/>
+      <use href="#ant" class="grn" transform="translate(-15.5,-4) scale(0.72)"/>
     </g>
     <text x="24.75" y="86" text-anchor="middle" class="s">head left · big hind leg bent like a Z · ≈ 11 × 6 cm</text>
   </g>
