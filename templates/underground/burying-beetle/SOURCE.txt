@@ -1,0 +1,25 @@
+FuzzleWorld × Giant Insect World — felt puzzle photo source
+===========================================================
+
+File:          burying-beetle_Nicrophorus-vespilloides_nevwright_CC-BY.jpg
+Thumbnail:     _thumb.jpg (centre crop, 560 px)
+
+Species:       Nicrophorus vespilloides — Common Burying Beetle
+               (Sexton / Undertaker Beetle)
+
+Photographer:  nevwright (iNaturalist user)
+Location:      Greater Manchester, UK (53.4151, -2.3695)
+               ~11 km from Manchester city centre (53.4808, -2.2426)
+Observed:      2019-09-08
+Observation:   https://www.inaturalist.org/observations/32342039
+Quality grade: research
+
+Licence:       CC BY 4.0 (Creative Commons Attribution)
+Attribution:   (c) nevwright, some rights reserved (CC BY), via iNaturalist
+
+Credit line:   Photo © nevwright, CC BY, via iNaturalist.
+
+Notes:         Clear profile of an adult carrying a cluster of orange
+               phoretic mites (Poecilochirus) on its back — the closest
+               research-grade CC observation to Manchester. Shows the
+               black body and orange elytral banding well.

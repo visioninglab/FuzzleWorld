@@ -1,0 +1,19 @@
+Keeled Skimmer (Orthetrum coerulescens) — source image
+=======================================================
+
+Naming convention: <common-english>_<Latin-binomial>_<photographer>_<cc-requirement>.jpg
+
+File:         keeled-skimmer_Orthetrum-coerulescens_gwynmwilliams_CC-BY.jpg
+Species:      Orthetrum coerulescens (Keeled Skimmer) — mature male, powder-blue abdomen
+Photographer: gwynmwilliams (iNaturalist user login: gwynmwilliams)
+Location:     Irton Fell, Cumbria, UK (~125 km NNW of Manchester — the Keeled Skimmer
+              is a scarce heathland/bog species with no records near Manchester; this
+              is the top-voted clear adult male within a nationwide-scale search)
+Source:       https://www.inaturalist.org/observations/202808940
+Photo:        https://inaturalist-open-data.s3.amazonaws.com/photos/358234620/original.jpg
+
+Licence:      CC BY 4.0 (attribution required)
+              https://creativecommons.org/licenses/by/4.0/
+
+Credit (required by CC-BY, used on the kit):
+  Keeled Skimmer photo © gwynmwilliams, CC-BY, via iNaturalist.

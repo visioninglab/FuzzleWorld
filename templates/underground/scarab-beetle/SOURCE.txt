@@ -1,0 +1,25 @@
+FuzzleWorld × Giant Insect World — Sacred Scarab felt puzzle ("fuzzle")
+Theme: Beetles
+
+PHOTO
+  File:        scarab-beetle_Scarabaeus-sacer_Blanchemain-Joel_CC0.jpg
+  Thumbnail:   _thumb.jpg (cropped from the above)
+  Species:     Scarabaeus sacer (Linnaeus, 1758) — the Sacred Scarab, a dung beetle
+  Photographer: Blanchemain Joël (iNaturalist user "joelb73")
+  Actual location: Targante, Morocco (NOT near Manchester — Scarabaeus sacer is a
+                   Mediterranean/North-African species and does not occur in Britain.
+                   The nearest research-grade records are around the Mediterranean;
+                   there are none anywhere near Manchester, so this photo was taken in Morocco.)
+  Observed:    2025-11-23
+  Observation: https://www.inaturalist.org/observations/329109619
+  Licence:     CC0 (public domain, "no rights reserved")
+  Credit:      Photo © Blanchemain Joël, CC0, via iNaturalist. Taken at Targante, Morocco.
+
+LOGO
+  File:  _giw-logo-t.png
+  Credit: Logo © Giant Insect World. Copied from templates/meadow/ladybird/.
+
+Chosen from a global iNaturalist search (order_by=votes) because the species is essentially
+absent from the UK. A nationwide/Manchester-radius search returned zero results. This clean
+dorsal photo on sandy soil was picked as the best clear top-down view and the most permissive
+licence (CC0), and its sandy substrate matches the kit's desert-soil mat.

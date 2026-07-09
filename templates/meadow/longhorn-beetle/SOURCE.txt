@@ -1,0 +1,19 @@
+Black-and-yellow Longhorn Beetle (Rutpela maculata) — source image
+==================================================================
+
+Naming convention: <common-english>_<Latin-binomial>_<photographer>_<cc-requirement>.jpg
+
+File:         longhorn-beetle_Rutpela-maculata_Kim-Leyland_CC-BY.jpg
+Species:      Rutpela maculata (Black-and-yellow Longhorn Beetle / Spotted Longhorn)
+Photographer: Kim Leyland (via iNaturalist)
+Location:     Meersbrook, Sheffield S8, UK (~53 km E of Manchester — closest clear,
+              research-grade CC adult with a full side profile; nearer records were
+              busier/partly hidden on flower heads)
+Source:       https://www.inaturalist.org/observations/172980688
+Photo:        https://inaturalist-open-data.s3.amazonaws.com/photos/300358540/original.jpeg
+
+Licence:      CC BY 4.0 (attribution required)
+              https://creativecommons.org/licenses/by/4.0/
+
+Credit (as used on the kit):
+  Black-and-yellow longhorn beetle photo (c) Kim Leyland, CC BY, via iNaturalist.

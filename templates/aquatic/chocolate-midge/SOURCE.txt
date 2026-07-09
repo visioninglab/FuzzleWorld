@@ -1,0 +1,23 @@
+FuzzleWorld × Giant Insect World — "The real thing" photo source
+================================================================
+
+Kit:          Chocolate Midge (felt puzzle) — Night theme
+Genus:        Forcipomyia sp. (a biting midge / chocolate midge, family Ceratopogonidae)
+              NOTE: identified to GENUS only — these tiny midges are hard to key to species from photos.
+
+Photographer: Alfie Felton  (iNaturalist user: jaiiiiiiii_)
+Licence:      CC-BY (Creative Commons Attribution)
+Location:     Rochdale, Greater Manchester, UK  (53.6405, -2.1609)
+Distance:     ~18 km NNE of Manchester city centre (53.4808, -2.2426)
+
+Observation:  https://www.inaturalist.org/observations/271052467
+Photo:        https://inaturalist-open-data.s3.amazonaws.com/photos/487514200/original.jpeg  (photo id 487514200)
+
+Credit line:  Photo © Alfie Felton, CC-BY, via iNaturalist.
+Logo:         © Giant Insect World.
+
+Notes: Nearest decent macro of an ADULT midge to Manchester. Forcipomyia are heavily
+under-recorded; most nearby records are of the caterpillar-like larvae. This side-on
+shot clearly shows the humped thorax, a single pale-veined wing over the back, the dark
+eye and the fuzzy/feathery antennae — a good reference for a very small delicate fly.
+Downloaded original: chocolate-midge_Forcipomyia_Alfie-Felton_CC-BY.jpg
