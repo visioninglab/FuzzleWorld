@@ -30,7 +30,7 @@ Organised by habitat theme (each has its own premade mat colour):
 - **7-spot Ladybird** (*Coccinella septempunctata*)
 - **Meadow Grasshopper** (*Pseudochorthippus parallelus*)
 - **Painted Lady** butterfly (*Vanessa cardui*)
-- **Tawny Mining Bee** (*Andrena fulva*)
+- **Manchester Bee** — worker honey bee (*Apis mellifera*)
 - **Peppered Moth** (*Biston betularia*)
 - **Black-and-yellow Longhorn Beetle** (*Rutpela maculata*)
 

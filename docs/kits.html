@@ -57,7 +57,7 @@ footer b{color:var(--under)}
   <p class="lead"><b>Fuzzle = felt + puzzle.</b> Print a pattern, cut the shapes from felt, and build a little British minibeast — then take it apart and build it again. Every kit is free to print.</p>
 
   <div class="how">
-    <div class="step"><b>1</b><span>Print</span><small>A4, landscape, at 100% (actual size).</small></div>
+    <div class="step"><b>1</b><span>Print pattern</span><small>A4, landscape, at 100% (actual size).</small></div>
     <div class="step"><b>2</b><span>Trace</span><small>Draw each shape onto the right colour of felt.</small></div>
     <div class="step"><b>3</b><span>Cut</span><small>Snip out all the felt pieces.</small></div>
     <div class="step"><b>4</b><span>Build</span><small>Lay the pieces on the mat to make your bug.</small></div>
@@ -80,7 +80,7 @@ const KITS=[
  ["ladybird","7-spot Ladybird","Coccinella septempunctata","meadow"],
  ["grasshopper","Meadow Grasshopper","Pseudochorthippus parallelus","meadow"],
  ["painted-lady","Painted Lady","Vanessa cardui","meadow"],
- ["tawny-mining-bee","Tawny Mining Bee","Andrena fulva","meadow"],
+ ["manchester-bee","Manchester Bee","Apis mellifera","meadow"],
  ["peppered-moth","Peppered Moth","Biston betularia","meadow"],
  ["longhorn-beetle","Black-and-yellow Longhorn","Rutpela maculata","meadow"],
  ["river-skater","River Skater","Aquarius najas","pond"],
@@ -106,7 +106,7 @@ const cats=document.getElementById("cats");
     const base=`${REPO}/${h.folder}/${slug}/${slug}-felt-template`;
     const d=document.createElement("div");d.className="kit";
     d.innerHTML=`<div class="head"><img src="./images/coins/${slug}.jpg" alt="${name}"><div><div class="n">${name}</div><div class="l">${latin}</div></div></div>
-      <div class="acts"><a class="see" href="./images/previews/${slug}.jpg" target="_blank" rel="noopener">See picture</a><a class="pdf" href="${base}.pdf" target="_blank" rel="noopener">Download PDF</a></div>`;
+      <div class="acts"><a class="see" href="./images/previews/${slug}.jpg" target="_blank" rel="noopener">See pattern</a><a class="pdf" href="${base}.pdf" target="_blank" rel="noopener">Download PDF</a></div>`;
     g.appendChild(d);
   });
   sec.appendChild(g);cats.appendChild(sec);
