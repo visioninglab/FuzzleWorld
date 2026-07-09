@@ -31,8 +31,7 @@ header{flex:none;background:linear-gradient(#fff,#fbf5e6);box-shadow:0 2px 10px 
 
 /* board = the felt scene */
 #board{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:8px;background:radial-gradient(120% 120% at 50% 0,#fbf5e6,var(--cream-2))}
-.stage{position:relative;aspect-ratio:1445/1088;max-height:100%;max-width:100%;border-radius:16px;overflow:hidden;
-  box-shadow:0 8px 24px rgba(74,58,36,.28),0 0 0 5px #fff}
+.stage{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 8px 24px rgba(74,58,36,.28),0 0 0 5px #fff}
 .stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
 .zone{position:absolute;left:0;right:0;transition:background .12s}
 .zone[data-zone="meadow"]{top:27%;height:30%}
@@ -129,7 +128,7 @@ header{flex:none;background:linear-gradient(#fff,#fbf5e6);box-shadow:0 2px 10px 
   <div class="card"><button class="x" data-close aria-label="Close">×</button><h2 id="mt">Meet the minibeasts</h2><p class="sub">18 felt bugs and where each one lives.</p><div class="grid" id="meetgrid"></div></div>
 </div>
 <div class="modal" id="kitsm" role="dialog" aria-modal="true" aria-labelledby="kt">
-  <div class="card"><button class="x" data-close aria-label="Close">×</button><h2 id="kt">Get the craft kits</h2><p class="sub">Each felt-puzzle kit is a free printable pattern. Print on A4 at 100%.</p><div class="grid" id="kitsgrid"></div></div>
+  <div class="card"><button class="x" data-close aria-label="Close">×</button><h2 id="kt">Get the craft kits</h2><p class="sub">Each felt-puzzle kit is a free printable pattern. Print on A4 at 100%.</p><div class="grid" id="kitsgrid"></div><p style="text-align:center;margin:16px 0 2px"><a href="https://visioninglab.github.io/FuzzleWorld/kits.html" target="_blank" rel="noopener" style="font-weight:900;color:var(--rose);text-decoration:none">Open the full kits page →</a></p></div>
 </div>
 
 <script>
@@ -160,6 +159,8 @@ const BUGS=[
 const RM=matchMedia("(prefers-reduced-motion:reduce)").matches;
 const $=id=>document.getElementById(id);
 const tray=$("tray"),fill=$("fill"),done=$("done");
+function fitStage(){const b=$("board"),s=$("stage");if(!b||!s)return;const bw=b.clientWidth-16,bh=b.clientHeight-16,ar=1445/1088;let w=bw,h=w/ar;if(h>bh){h=bh;w=h*ar}s.style.width=Math.max(0,Math.round(w))+"px";s.style.height=Math.max(0,Math.round(h))+"px"}
+addEventListener("resize",fitStage);addEventListener("orientationchange",fitStage);
 let placed=0,selected=null,tries=0,t0=0,tick=0;
 let AC,muted=false;
 function beep(fr,dur=.12,type="triangle",g=.16){if(muted)return;try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();const c=AC;let t=c.currentTime;fr.forEach(f=>{const o=c.createOscillator(),ga=c.createGain();o.type=type;o.frequency.value=f;ga.gain.setValueAtTime(.0001,t);ga.gain.linearRampToValueAtTime(g,t+.01);ga.gain.exponentialRampToValueAtTime(.0001,t+dur);o.connect(ga).connect(c.destination);o.start(t);o.stop(t+dur);t+=dur*.85})}catch(e){}}
@@ -211,4 +212,6 @@ const mg=$("meetgrid"),kg=$("kitsgrid");
 function toast(t){const el=$("toast");el.textContent=t;el.classList.add("show");setTimeout(()=>el.classList.remove("show"),1800)}
 $("share").addEventListener("click",async()=>{const data={title:"FuzzleWorld — Home the Minibeasts",text:"Play the felt bug game — sort the minibeasts into their homes!",url:SHARE};try{if(navigator.share){await navigator.share(data)}else{await navigator.clipboard.writeText(SHARE);toast("Link copied!")}}catch(e){}});
 build();
+fitStage();requestAnimationFrame(fitStage);
+{const im=document.querySelector(".stage img");if(im){im.addEventListener("load",fitStage);if(im.complete)fitStage()}}
 </script>

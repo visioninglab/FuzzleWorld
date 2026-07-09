@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FuzzleWorld — Felt-puzzle kits to print</title>
+<style>
+@font-face{font-family:"Nunito";src:url("./nunito.ttf") format("truetype");font-weight:200 1000;font-style:normal;font-display:swap}
+*{box-sizing:border-box}
+:root{--cream:#f3ecd9;--cream-2:#e9dfc4;--ink:#4a3a24;--ink-soft:#7a6a4f;
+  --meadow:#7fa64e;--pond:#3b7ea6;--under:#8a6a3a;--gold:#f2b53c;--rose:#d24a63}
+html,body{margin:0}
+body{font-family:"Nunito",ui-rounded,"Segoe UI",system-ui,sans-serif;color:var(--ink);
+  background:radial-gradient(130% 80% at 50% -10%,#fff7e6,var(--cream) 55%,var(--cream-2)) fixed;line-height:1.5}
+.wrap{max-width:1040px;margin:0 auto;padding:20px 16px 60px}
+a{color:var(--pond)}
+header.top{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-bottom:18px}
+.logo{font-weight:900;letter-spacing:-.02em;font-size:clamp(26px,6vw,42px);margin:0}
+.logo b{color:var(--gold)}
+.grow{flex:1}
+.play{font-weight:900;font-size:16px;color:#fff;background:var(--rose);border-radius:16px;padding:11px 20px;text-decoration:none;box-shadow:0 5px 0 #a5324a;white-space:nowrap}
+.lead{font-size:clamp(16px,2.4vw,20px);font-weight:700;color:var(--ink);max-width:64ch;margin:0 0 18px}
+.how{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:0 0 30px}
+.step{background:#fff;border-radius:16px;padding:12px 14px;box-shadow:0 3px 0 rgba(74,58,36,.1)}
+.step b{display:block;font-size:26px;color:var(--meadow);font-weight:900;line-height:1}
+.step span{font-weight:800;font-size:14px}
+.step small{display:block;color:var(--ink-soft);font-weight:600;font-size:12.5px;margin-top:2px}
+h2.sec{font-size:24px;margin:26px 0 12px;display:flex;align-items:center;gap:10px}
+h2.sec .dot{width:16px;height:16px;border-radius:50%;box-shadow:0 2px 0 rgba(0,0,0,.12)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.kit{background:#fff;border-radius:18px;padding:14px;box-shadow:0 4px 0 rgba(74,58,36,.12);display:flex;flex-direction:column;gap:8px}
+.kit .head{display:flex;gap:12px;align-items:center}
+.kit img{width:66px;height:66px;border-radius:14px;flex:none;object-fit:cover;box-shadow:0 3px 0 rgba(74,58,36,.16)}
+.kit .n{font-weight:900;font-size:16px;line-height:1.1}
+.kit .l{font-style:italic;color:var(--ink-soft);font-weight:600;font-size:12.5px}
+.kit .acts{display:flex;gap:8px;margin-top:auto}
+.kit .pdf{flex:1;text-align:center;font-weight:900;font-size:13.5px;color:#fff;background:var(--meadow);border-radius:12px;padding:9px;text-decoration:none;box-shadow:0 3px 0 #5f8237}
+.kit .svg{font-weight:800;font-size:13px;color:var(--ink);background:var(--cream);border-radius:12px;padding:9px 12px;text-decoration:none;box-shadow:0 3px 0 rgba(74,58,36,.16)}
+footer{margin-top:40px;color:var(--ink-soft);font-weight:700;font-size:13px;text-align:center;border-top:2px solid var(--cream-2);padding-top:18px}
+footer b{color:var(--under)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1 class="logo">Fuzzle<b>World</b></h1>
+    <span class="grow"></span>
+    <a class="play" href="./index.html">▶ Play the game</a>
+  </header>
+
+  <p class="lead"><b>Fuzzle = felt + puzzle.</b> Print a pattern, cut the shapes from felt, and build a little British minibeast — then take it apart and build it again. Every kit is free to print.</p>
+
+  <div class="how">
+    <div class="step"><b>1</b><span>Print</span><small>A4, landscape, at 100% (actual size).</small></div>
+    <div class="step"><b>2</b><span>Trace</span><small>Draw each shape onto the right colour of felt.</small></div>
+    <div class="step"><b>3</b><span>Cut</span><small>Snip out all the felt pieces.</small></div>
+    <div class="step"><b>4</b><span>Build</span><small>Lay the pieces on the mat to make your bug.</small></div>
+    <div class="step"><b>5</b><span>Rebuild</span><small>Take it apart and build it again — no glue needed.</small></div>
+  </div>
+
+  <div id="cats"></div>
+
+  <footer>
+    <p><b>FuzzleWorld</b> · part of Giant Insect World · 18 kits across three habitats.</p>
+    <p>Reference photos from iNaturalist under CC0 / CC-BY, credited in each kit. Fonts: Nunito &amp; Source Serif 4.</p>
+  </footer>
+</div>
+
+<script>
+const REPO="https://github.com/visioninglab/FuzzleWorld/raw/main/templates";
+const HAB={meadow:{name:"Meadow",c:"#7fa64e",folder:"meadow"},pond:{name:"Pond",c:"#3b7ea6",folder:"aquatic"},under:{name:"Underground",c:"#8a6a3a",folder:"underground"}};
+const KITS=[
+ ["butterfly","Small Tortoiseshell","Aglais urticae","meadow"],
+ ["ladybird","7-spot Ladybird","Coccinella septempunctata","meadow"],
+ ["grasshopper","Meadow Grasshopper","Pseudochorthippus parallelus","meadow"],
+ ["painted-lady","Painted Lady","Vanessa cardui","meadow"],
+ ["tawny-mining-bee","Tawny Mining Bee","Andrena fulva","meadow"],
+ ["peppered-moth","Peppered Moth","Biston betularia","meadow"],
+ ["longhorn-beetle","Black-and-yellow Longhorn","Rutpela maculata","meadow"],
+ ["river-skater","River Skater","Aquarius najas","pond"],
+ ["dragonfly","Common Darter","Sympetrum striolatum","pond"],
+ ["bell-spider","Diving Bell Spider","Argyroneta aquatica","pond"],
+ ["keeled-skimmer","Keeled Skimmer","Orthetrum coerulescens","pond"],
+ ["chocolate-midge","Chocolate Midge","Forcipomyia sp.","pond"],
+ ["woodlouse","Common Shiny Woodlouse","Oniscus asellus","under"],
+ ["earthworm","Common Earthworm","Lumbricus terrestris","under"],
+ ["ant","Black Garden Ant","Lasius niger","under"],
+ ["scarab-beetle","Sacred Scarab","Scarabaeus sacer","under"],
+ ["burying-beetle","Burying Beetle","Nicrophorus vespilloides","under"],
+ ["glow-worm","Glow-worm","Lampyris noctiluca","under"]
+];
+const cats=document.getElementById("cats");
+["meadow","pond","under"].forEach(hab=>{
+  const h=HAB[hab];
+  const sec=document.createElement("section");
+  const list=KITS.filter(k=>k[3]===hab);
+  sec.innerHTML=`<h2 class="sec"><span class="dot" style="background:${h.c}"></span>${h.name} <span style="font-weight:700;color:var(--ink-soft);font-size:16px">· ${list.length} kits</span></h2>`;
+  const g=document.createElement("div");g.className="grid";
+  list.forEach(([slug,name,latin])=>{
+    const base=`${REPO}/${h.folder}/${slug}/${slug}-felt-template`;
+    const d=document.createElement("div");d.className="kit";
+    d.innerHTML=`<div class="head"><img src="./images/coins/${slug}.jpg" alt="${name}"><div><div class="n">${name}</div><div class="l">${latin}</div></div></div>
+      <div class="acts"><a class="pdf" href="${base}.pdf" target="_blank" rel="noopener">Print kit (PDF)</a><a class="svg" href="${base}.svg" target="_blank" rel="noopener" title="Editable vector">SVG</a></div>`;
+    g.appendChild(d);
+  });
+  sec.appendChild(g);cats.appendChild(sec);
+});
+</script>
+</body>
+</html>
