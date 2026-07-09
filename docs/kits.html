@@ -14,11 +14,16 @@ body{font-family:"Nunito",ui-rounded,"Segoe UI",system-ui,sans-serif;color:var(-
   background:radial-gradient(130% 80% at 50% -10%,#fff7e6,var(--cream) 55%,var(--cream-2)) fixed;line-height:1.5}
 .wrap{max-width:1040px;margin:0 auto;padding:20px 16px 60px}
 a{color:var(--pond)}
-header.top{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-bottom:18px}
-.logo{font-weight:900;letter-spacing:-.02em;font-size:clamp(26px,6vw,42px);margin:0}
-.logo b{color:var(--gold)}
+.navbar{position:sticky;top:0;z-index:20;background:linear-gradient(#fff,#fbf5e6);box-shadow:0 2px 10px rgba(74,58,36,.14)}
+.nav{max-width:1040px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:10px 16px}
+.nav .brand{font-weight:900;letter-spacing:-.02em;font-size:clamp(22px,5vw,30px);color:var(--ink);text-decoration:none}
+.nav .brand b{color:var(--gold)}
 .grow{flex:1}
-.play{font-weight:900;font-size:16px;color:#fff;background:var(--rose);border-radius:16px;padding:11px 20px;text-decoration:none;box-shadow:0 5px 0 #a5324a;white-space:nowrap}
+.navlink{font-family:inherit;font-weight:900;font-size:14px;border:none;cursor:pointer;border-radius:12px;padding:8px 15px;text-decoration:none;background:var(--cream);color:var(--ink);box-shadow:0 2px 0 rgba(74,58,36,.16);white-space:nowrap}
+.navlink.active{background:var(--gold);box-shadow:0 2px 0 #c98f1e}
+.navlink:active{transform:translateY(2px)}
+.toast{position:fixed;left:50%;bottom:30px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;font-weight:800;padding:10px 18px;border-radius:14px;z-index:90;opacity:0;transition:.25s;pointer-events:none}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 .lead{font-size:clamp(16px,2.4vw,20px);font-weight:700;color:var(--ink);max-width:64ch;margin:0 0 18px}
 .how{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:0 0 30px}
 .step{background:#fff;border-radius:16px;padding:12px 14px;box-shadow:0 3px 0 rgba(74,58,36,.1)}
@@ -35,19 +40,20 @@ h2.sec .dot{width:16px;height:16px;border-radius:50%;box-shadow:0 2px 0 rgba(0,0
 .kit .l{font-style:italic;color:var(--ink-soft);font-weight:600;font-size:12.5px}
 .kit .acts{display:flex;gap:8px;margin-top:auto}
 .kit .pdf{flex:1;text-align:center;font-weight:900;font-size:13.5px;color:#fff;background:var(--meadow);border-radius:12px;padding:9px;text-decoration:none;box-shadow:0 3px 0 #5f8237}
-.kit .svg{font-weight:800;font-size:13px;color:var(--ink);background:var(--cream);border-radius:12px;padding:9px 12px;text-decoration:none;box-shadow:0 3px 0 rgba(74,58,36,.16)}
+.kit .see{flex:1;text-align:center;font-weight:900;font-size:13.5px;color:var(--ink);background:var(--cream);border-radius:12px;padding:9px;text-decoration:none;box-shadow:0 3px 0 rgba(74,58,36,.16)}
 footer{margin-top:40px;color:var(--ink-soft);font-weight:700;font-size:13px;text-align:center;border-top:2px solid var(--cream-2);padding-top:18px}
 footer b{color:var(--under)}
 </style>
 </head>
 <body>
+<header class="navbar"><div class="nav">
+  <a class="brand" href="./index.html">Fuzzle<b>World</b></a>
+  <span class="grow"></span>
+  <a class="navlink" href="./index.html">Play</a>
+  <a class="navlink active" href="./kits.html">Kits</a>
+  <button class="navlink" id="share">Share</button>
+</div></header>
 <div class="wrap">
-  <header class="top">
-    <h1 class="logo">Fuzzle<b>World</b></h1>
-    <span class="grow"></span>
-    <a class="play" href="./index.html">▶ Play the game</a>
-  </header>
-
   <p class="lead"><b>Fuzzle = felt + puzzle.</b> Print a pattern, cut the shapes from felt, and build a little British minibeast — then take it apart and build it again. Every kit is free to print.</p>
 
   <div class="how">
@@ -81,11 +87,11 @@ const KITS=[
  ["dragonfly","Common Darter","Sympetrum striolatum","pond"],
  ["bell-spider","Diving Bell Spider","Argyroneta aquatica","pond"],
  ["keeled-skimmer","Keeled Skimmer","Orthetrum coerulescens","pond"],
- ["chocolate-midge","Chocolate Midge","Forcipomyia sp.","pond"],
+ ["highland-midge","Highland Midge","Culicoides impunctatus","pond"],
  ["woodlouse","Common Shiny Woodlouse","Oniscus asellus","under"],
  ["earthworm","Common Earthworm","Lumbricus terrestris","under"],
  ["ant","Black Garden Ant","Lasius niger","under"],
- ["scarab-beetle","Sacred Scarab","Scarabaeus sacer","under"],
+ ["maybug","Maybug","Melolontha melolontha","under"],
  ["burying-beetle","Burying Beetle","Nicrophorus vespilloides","under"],
  ["glow-worm","Glow-worm","Lampyris noctiluca","under"]
 ];
@@ -100,11 +106,15 @@ const cats=document.getElementById("cats");
     const base=`${REPO}/${h.folder}/${slug}/${slug}-felt-template`;
     const d=document.createElement("div");d.className="kit";
     d.innerHTML=`<div class="head"><img src="./images/coins/${slug}.jpg" alt="${name}"><div><div class="n">${name}</div><div class="l">${latin}</div></div></div>
-      <div class="acts"><a class="pdf" href="${base}.pdf" target="_blank" rel="noopener">Print kit (PDF)</a><a class="svg" href="${base}.svg" target="_blank" rel="noopener" title="Editable vector">SVG</a></div>`;
+      <div class="acts"><a class="see" href="./images/previews/${slug}.jpg" target="_blank" rel="noopener">See picture</a><a class="pdf" href="${base}.pdf" target="_blank" rel="noopener">Download PDF</a></div>`;
     g.appendChild(d);
   });
   sec.appendChild(g);cats.appendChild(sec);
 });
+const SHARE="https://visioninglab.github.io/FuzzleWorld/";
+function toast(t){const el=document.getElementById("toast");el.textContent=t;el.classList.add("show");setTimeout(()=>el.classList.remove("show"),1800)}
+document.getElementById("share").addEventListener("click",async()=>{const d={title:"FuzzleWorld — felt bug kits",text:"Free printable felt-puzzle minibeast kits to make",url:SHARE};try{if(navigator.share)await navigator.share(d);else{await navigator.clipboard.writeText(SHARE);toast("Link copied!")}}catch(e){}});
 </script>
+<div class="toast" id="toast"></div>
 </body>
 </html>

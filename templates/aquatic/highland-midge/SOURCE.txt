@@ -1,0 +1,34 @@
+FuzzleWorld × Giant Insect World — "The real thing" photo source
+=================================================================
+
+Kit:           Highland Midge felt puzzle (Aquatic theme)
+Species:       Culicoides impunctatus (Highland Midge / Scottish biting midge)
+File:          highland-midge_Culicoides-impunctatus_Frank-Ashwood_CC-BY.jpg
+Thumbnail:     _thumb.jpg  (centre crop of the original, 560 px wide)
+
+Photographer:  Frank Ashwood  (iNaturalist: frankashwood)
+Licence:       CC BY  (Creative Commons Attribution)
+Attribution:   (c) Frank Ashwood, some rights reserved (CC BY)
+Observation:   https://www.inaturalist.org/observations/222198848
+Photo id:      393578125
+Observed on:   2020-07-15
+Quality grade: research
+
+Location:      Brodick, Isle of Arran, Scotland, UK
+Note on Manchester distance:
+   This is a Highland Midge — overwhelmingly a Scottish species — so there is
+   NO good record anywhere near Manchester (53.4808, -2.2426). The nearest
+   Creative-Commons, research-grade adult photo is on the Isle of Arran,
+   roughly 300 km north-west of Manchester. Location is stated honestly in the
+   kit ("The real thing" panel and back credits). Only 4 CC-licensed
+   research-grade observations of this species exist worldwide on iNaturalist;
+   this Arran macro (a single female biting skin, blood-filled abdomen,
+   patterned wing, feathery antenna and dark eye all clearly visible) is by
+   far the clearest adult image and was chosen for that reason.
+
+Credit line used in kit:
+   Photo © Frank Ashwood, CC-BY, via iNaturalist. Photographed on the Isle of
+   Arran, Scotland — about 300 km from Manchester.
+
+Logo:          _giw-logo-t.png  © Giant Insect World (transparent version,
+               copied from templates/aquatic/river-skater/).

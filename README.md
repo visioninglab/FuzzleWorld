@@ -39,13 +39,13 @@ Organised by habitat theme (each has its own premade mat colour):
 - **Common Darter** dragonfly (*Sympetrum striolatum*)
 - **Diving Bell Spider** (*Argyroneta aquatica*)
 - **Keeled Skimmer** dragonfly (*Orthetrum coerulescens*)
-- **Chocolate Midge** (*Forcipomyia* sp.)
+- **Highland Midge** (*Culicoides impunctatus*)
 
 **Underground** (brown soil mat) — `templates/underground/`
 - **Common Shiny Woodlouse** (*Oniscus asellus*)
 - **Common Earthworm** (*Lumbricus terrestris*)
 - **Black Garden Ant** (*Lasius niger*)
-- **Sacred Scarab Beetle** (*Scarabaeus sacer*)
+- **Maybug** / Cockchafer (*Melolontha melolontha*)
 - **Burying Beetle** (*Nicrophorus vespilloides*)
 - **Glow-worm** (*Lampyris noctiluca*)
 

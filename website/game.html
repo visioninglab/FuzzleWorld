@@ -25,6 +25,13 @@ header{flex:none;background:linear-gradient(#fff,#fbf5e6);box-shadow:0 2px 10px 
 .topbar{display:flex;align-items:center;gap:10px;padding:7px 12px}
 .logo{font-weight:900;letter-spacing:-.02em;font-size:clamp(17px,4vw,24px);color:var(--ink)}
 .logo b{color:var(--gold)}
+.nav{display:flex;align-items:center;gap:8px;padding:8px 12px 4px}
+.nav .brand{font-weight:900;letter-spacing:-.02em;font-size:clamp(19px,4.4vw,25px);color:var(--ink);text-decoration:none}
+.nav .brand b{color:var(--gold)}
+.navlink{font-family:inherit;font-weight:900;font-size:14px;border:none;cursor:pointer;border-radius:12px;padding:8px 15px;text-decoration:none;background:var(--cream);color:var(--ink);box-shadow:0 2px 0 rgba(74,58,36,.16);white-space:nowrap}
+.navlink.active{background:var(--gold);box-shadow:0 2px 0 #c98f1e}
+.navlink:active{transform:translateY(2px);box-shadow:0 0 rgba(0,0,0,0)}
+.gamebar{display:flex;align-items:center;gap:8px;padding:5px 12px 8px}
 .status{font-weight:900;font-variant-numeric:tabular-nums;font-size:14px;color:var(--ink-soft);white-space:nowrap}
 .status b{color:var(--ink)}
 .grow{flex:1}
@@ -68,6 +75,8 @@ header{flex:none;background:linear-gradient(#fff,#fbf5e6);box-shadow:0 2px 10px 
 @keyframes pop{0%{transform:scale(.4) rotate(-12deg)}60%{transform:scale(1.15) rotate(6deg)}100%{transform:scale(1)}}
 .coin.wob{animation:wob .45s}
 @keyframes wob{20%{transform:rotate(-9deg)}40%{transform:rotate(7deg)}60%{transform:rotate(-5deg)}80%{transform:rotate(3deg)}}
+.coin.placed{position:absolute;--sz:46px;border-radius:12px;cursor:default;pointer-events:none;z-index:4;box-shadow:0 3px 0 rgba(0,0,0,.3)}
+.coin.placed:hover{transform:none}
 
 /* modals + toast */
 .modal{position:fixed;inset:0;display:none;place-items:center;z-index:80;background:rgba(74,58,36,.5);backdrop-filter:blur(3px);padding:16px}
@@ -97,18 +106,20 @@ header{flex:none;background:linear-gradient(#fff,#fbf5e6);box-shadow:0 2px 10px 
 
 <div id="game">
   <header>
+    <div class="nav">
+      <a class="brand" href="https://visioninglab.github.io/FuzzleWorld/">Fuzzle<b>World</b></a>
+      <span class="grow"></span>
+      <a class="navlink active" href="https://visioninglab.github.io/FuzzleWorld/">Play</a>
+      <a class="navlink" href="https://visioninglab.github.io/FuzzleWorld/kits.html" target="_blank" rel="noopener">Kits</a>
+      <button class="navlink" id="share">Share</button>
+    </div>
     <span class="prog"><i id="fill"></i></span>
-    <div class="topbar">
-      <span class="logo">Fuzzle<b>World</b></span>
+    <div class="gamebar">
       <span class="status">⏱ <span id="timer">0:00</span> · <b><span id="done">0</span>/18</b></span>
       <span class="grow"></span>
-      <div class="tools">
-        <button class="tool" id="meet" title="Meet the bugs" aria-label="Meet the bugs">📖</button>
-        <button class="tool" id="kits" title="Get the craft kits" aria-label="Get the craft kits">🛒</button>
-        <button class="tool" id="hint" title="Hints" aria-label="Toggle hints" aria-pressed="true">💡</button>
-        <button class="tool" id="sound" title="Sound" aria-label="Toggle sound" aria-pressed="true">🔊</button>
-        <button class="tool" id="share" title="Share" aria-label="Share game">🔗</button>
-      </div>
+      <button class="tool" id="meet" title="Meet the bugs" aria-label="Meet the bugs">📖</button>
+      <button class="tool" id="hint" title="Hints" aria-label="Toggle hints" aria-pressed="true">💡</button>
+      <button class="tool" id="sound" title="Sound" aria-label="Toggle sound" aria-pressed="true">🔊</button>
     </div>
   </header>
 
@@ -133,9 +144,6 @@ header{flex:none;background:linear-gradient(#fff,#fbf5e6);box-shadow:0 2px 10px 
 <div class="modal" id="meetm" role="dialog" aria-modal="true" aria-labelledby="mt">
   <div class="card"><button class="x" data-close aria-label="Close">×</button><h2 id="mt">Meet the minibeasts</h2><p class="sub">18 felt bugs and where each one lives.</p><div class="grid" id="meetgrid"></div></div>
 </div>
-<div class="modal" id="kitsm" role="dialog" aria-modal="true" aria-labelledby="kt">
-  <div class="card"><button class="x" data-close aria-label="Close">×</button><h2 id="kt">Get the craft kits</h2><p class="sub">Each felt-puzzle kit is a free printable pattern. Print on A4 at 100%.</p><div class="grid" id="kitsgrid"></div><p style="text-align:center;margin:16px 0 2px"><a href="https://visioninglab.github.io/FuzzleWorld/kits.html" target="_blank" rel="noopener" style="font-weight:900;color:var(--rose);text-decoration:none">Open the full kits page →</a></p></div>
-</div>
 
 <script>
 const ICONS = __ICONS__;
@@ -154,18 +162,18 @@ const BUGS=[
  ["dragonfly","Common Darter","pond","One of the last dragonflies flying in autumn."],
  ["bell-spider","Bell Spider","pond","The only spider that lives underwater, in a silk bubble."],
  ["keeled-skimmer","Keeled Skimmer","pond","The males turn a dusty powder-blue."],
- ["chocolate-midge","Chocolate Midge","pond","This tiny fly pollinates cocoa — no midge, no chocolate!"],
+ ["highland-midge","Highland Midge","pond","The tiny Scottish biter that clouds summer glens."],
  ["woodlouse","Woodlouse","under","A little land crab that breathes through gills."],
  ["earthworm","Earthworm","under","Eats its way through soil and keeps it healthy."],
  ["ant","Garden Ant","under","Lives in a huge colony ruled by one queen."],
- ["scarab-beetle","Scarab Beetle","under","Rolls balls of dung and steers by the stars."],
+ ["maybug","Maybug","under","Bumbles into windows on warm May nights."],
  ["burying-beetle","Burying Beetle","under","An undertaker that buries dead mice to feed its young."],
  ["glow-worm","Glow-worm","under","The female glows green to call a mate on summer nights."]
 ];
 const RM=matchMedia("(prefers-reduced-motion:reduce)").matches;
 const $=id=>document.getElementById(id);
 const tray=$("tray"),fill=$("fill"),done=$("done");
-function fitStage(){const b=$("board"),s=$("stage");if(!b||!s)return;const bw=b.clientWidth-16,bh=b.clientHeight-16,ar=1445/1088;let w=bw,h=w/ar;if(h>bh){h=bh;w=h*ar}s.style.width=Math.max(0,Math.round(w))+"px";s.style.height=Math.max(0,Math.round(h))+"px"}
+function fitStage(){const b=$("board"),s=$("stage");if(!b||!s)return;const bw=b.clientWidth-16,bh=b.clientHeight-16,ar=1445/1088;let w=bw,h=w/ar;if(h>bh){h=bh;w=h*ar}w=Math.max(0,Math.round(w));h=Math.max(0,Math.round(h));s.style.width=w+"px";s.style.height=h+"px";s.querySelectorAll(".coin.placed").forEach(c=>{const sz=c.offsetWidth||46,fx=+c.dataset.fx,fy=+c.dataset.fy;c.style.left=Math.max(2,Math.min(w-sz-2,fx*w-sz/2))+"px";c.style.top=Math.max(2,Math.min(h-sz-2,fy*h-sz/2))+"px"})}
 addEventListener("resize",fitStage);addEventListener("orientationchange",fitStage);
 let placed=0,selected=null,tries=0,t0=0,tick=0;
 let AC,muted=false;
@@ -176,6 +184,7 @@ function fmt(ms){const s=Math.floor(ms/1000);return Math.floor(s/60)+":"+String(
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 function build(){
   tray.innerHTML="";document.querySelectorAll(".znest").forEach(n=>n.innerHTML="");
+  document.querySelectorAll(".coin.placed").forEach(c=>c.remove());
   placed=0;selected=null;tries=0;clearInterval(tick);t0=0;$("timer").textContent="0:00";update();
   shuffle([...BUGS]).forEach(b=>tray.appendChild(coin(b)));
 }
@@ -184,11 +193,29 @@ function pick(c){if(selected===c){selected=null;c.classList.remove("selected");r
 let drag=null,ox=0,oy=0,moved=false;
 function onDown(e){const c=e.currentTarget;drag=c;moved=false;const r=c.getBoundingClientRect();ox=e.clientX-r.left;oy=e.clientY-r.top;c._sx=e.clientX;c._sy=e.clientY;window.addEventListener("pointermove",onMove);window.addEventListener("pointerup",onUp,{once:true})}
 function onMove(e){if(!drag)return;if(!moved&&Math.hypot(e.clientX-drag._sx,e.clientY-drag._sy)<7)return;if(!moved){moved=true;const r=drag.getBoundingClientRect();drag.classList.add("drag");drag.style.width=r.width+"px";drag.style.height=r.height+"px"}drag.style.left=(e.clientX-ox)+"px";drag.style.top=(e.clientY-oy)+"px";hot(zoneAt(e.clientX,e.clientY))}
-function onUp(e){window.removeEventListener("pointermove",onMove);const c=drag;drag=null;if(!moved){pick(c);return}c.classList.remove("drag");c.style.cssText="background-image:"+c.style.backgroundImage;c.style.setProperty("--hc",HAB[c.dataset.hab].c);hot(null);const z=zoneAt(e.clientX,e.clientY);if(z)tryPlace(c,z)}
+function onUp(e){window.removeEventListener("pointermove",onMove);const c=drag;drag=null;if(!moved){pick(c);return}c.classList.remove("drag");c.style.cssText="background-image:"+c.style.backgroundImage;c.style.setProperty("--hc",HAB[c.dataset.hab].c);hot(null);const z=zoneAt(e.clientX,e.clientY);if(z)tryPlace(c,z,e.clientX,e.clientY)}
 function zoneAt(x,y){return[...document.querySelectorAll(".zone")].find(z=>{const r=z.getBoundingClientRect();return x>=r.left&&x<=r.right&&y>=r.top&&y<=r.bottom})||null}
 function hot(z){document.querySelectorAll(".zone").forEach(x=>x.classList.toggle("hot",x===z))}
-document.querySelectorAll(".zone").forEach(z=>z.addEventListener("click",()=>{if(selected)tryPlace(selected,z)}));
-function tryPlace(c,zone){startTimer();if(c.dataset.hab===zone.dataset.zone){c.classList.remove("selected");if(selected===c)selected=null;zone.querySelector(".znest").appendChild(c);if(!RM){c.classList.remove("pop");void c.offsetWidth;c.classList.add("pop")}sparkle(c);sOK();placed++;update();if(placed===BUGS.length)win()}else{tries++;sNo();if(!RM){zone.classList.add("nope");setTimeout(()=>zone.classList.remove("nope"),400);c.classList.remove("wob");void c.offsetWidth;c.classList.add("wob")}c.classList.remove("selected");if(selected===c)selected=null}}
+document.querySelectorAll(".zone").forEach(z=>z.addEventListener("click",ev=>{if(selected)tryPlace(selected,z,ev.clientX,ev.clientY)}));
+function tryPlace(c,zone,x,y){startTimer();
+  if(c.dataset.hab===zone.dataset.zone){
+    c.classList.remove("selected");if(selected===c)selected=null;
+    const st=$("stage"),sr=st.getBoundingClientRect(),sz=46;
+    const bg=c.style.backgroundImage;
+    const cx=(x!=null?x-sr.left:sr.width/2),cy=(y!=null?y-sr.top:sr.height/2);
+    const fx=Math.min(1,Math.max(0,cx/sr.width)),fy=Math.min(1,Math.max(0,cy/sr.height));
+    const lx=Math.max(2,Math.min(sr.width-sz-2,cx-sz/2)),ty=Math.max(2,Math.min(sr.height-sz-2,cy-sz/2));
+    c.className="coin placed";c.dataset.fx=fx;c.dataset.fy=fy;
+    c.style.cssText=`background-image:${bg};position:absolute;left:${lx}px;top:${ty}px`;
+    st.appendChild(c);
+    if(!RM){void c.offsetWidth;c.classList.add("pop")}
+    sparkle(c);sOK();placed++;update();if(placed===BUGS.length)win();
+  }else{
+    tries++;sNo();
+    if(!RM){zone.classList.add("nope");setTimeout(()=>zone.classList.remove("nope"),400);c.classList.remove("wob");void c.offsetWidth;c.classList.add("wob")}
+    c.classList.remove("selected");if(selected===c)selected=null;
+  }
+}
 function update(){done.textContent=placed;fill.style.width=(placed/BUGS.length*100)+"%"}
 function sparkle(c){if(RM)return;const r=c.getBoundingClientRect();for(let i=0;i<8;i++){const s=document.createElement("div");s.style.cssText=`position:fixed;left:${r.left+r.width/2}px;top:${r.top+r.height/2}px;width:8px;height:8px;border-radius:2px;z-index:75;pointer-events:none;background:${["#f2b53c","#d24a63","#7a4a9e","#fff"][i%4]}`;document.body.appendChild(s);const a=Math.random()*6.28,d=28+Math.random()*32;s.animate([{transform:"translate(0,0)",opacity:1},{transform:`translate(${Math.cos(a)*d}px,${Math.sin(a)*d}px) rotate(${200*Math.random()}deg)`,opacity:0}],{duration:600,easing:"cubic-bezier(.2,.8,.3,1)"}).onfinish=()=>s.remove()}}
 const cv=$("confetti"),ctx=cv.getContext("2d");let parts=[],raf=0;
@@ -203,16 +230,12 @@ document.querySelectorAll("[data-close]").forEach(b=>b.addEventListener("click",
 document.querySelectorAll(".modal").forEach(m=>m.addEventListener("click",e=>{if(e.target===m)m.classList.remove("show")}));
 addEventListener("keydown",e=>{if(e.key==="Escape")document.querySelectorAll(".modal.show").forEach(m=>m.classList.remove("show"))});
 $("meet").addEventListener("click",()=>open("meetm"));
-$("kits").addEventListener("click",()=>open("kitsm"));
-const mg=$("meetgrid"),kg=$("kitsgrid");
+const mg=$("meetgrid");
 [...BUGS].sort((a,b)=>a[1].localeCompare(b[1])).forEach(([slug,name,hab,fact])=>{
   const h=HAB[hab];
   const m=document.createElement("div");m.className="row";
   m.innerHTML=`<img src="${ICONS[slug]}" alt=""><div><div class="n">${name}</div><span class="hchip" style="background:${h.c}">${h.name}</span><div class="f">${fact}</div></div>`;
   mg.appendChild(m);
-  const k=document.createElement("div");k.className="row";
-  k.innerHTML=`<img src="${ICONS[slug]}" alt=""><div><div class="n">${name}</div><div class="f">${h.name} kit</div><a href="${REPO}/${h.folder}/${slug}/${slug}-felt-template.pdf" target="_blank" rel="noopener">Print kit (PDF) →</a></div>`;
-  kg.appendChild(k);
 });
 /* share */
 function toast(t){const el=$("toast");el.textContent=t;el.classList.add("show");setTimeout(()=>el.classList.remove("show"),1800)}
