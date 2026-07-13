@@ -2,6 +2,8 @@
 
 **Fuzzle = felt + puzzle.** FuzzleWorld is a collection of downloadable felt-puzzle kits — build a realistic layered-felt minibeast, take it apart, and build it again, like Lego. Part of [Giant Insect World](https://github.com/).
 
+> 🆕 **Latest work:** a new Style-A two-sheet kit design (9 species) lives in [`kit-builder/`](kit-builder/). See [WHATS-NEW.md](WHATS-NEW.md) for the handoff notes.
+
 ## How a kit works
 
 Each kit comes with **squares of felt** and a **printable template**:
