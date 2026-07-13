@@ -1,0 +1,111 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="../fonts_local.css"><style>
+@page { size:297mm 210mm; margin:0; }
+html,body{width:297mm; height:210mm; overflow:hidden;}
+:root{
+  --pink:#ffe0e0; --blue:#e0f0ff; --yellow:#fff5cc; --green:#e8ffe0;
+  --red:#e63946; --hblue:#2a6fdb; --purple:#7b2ff7; --hgreen:#3fae4a; --amber:#e8930c;
+  --ink:#3a3a3a; --muted:#5a5a5a;
+  --b1:#e63946; --b2:#2a6fdb; --b3:#3fae4a; --b4:#e94b9c; --b5:#f4a400; --b6:#7b2ff7;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html,body{background:#fff;}
+.sheet{width:297mm; height:210mm; background:#fff; position:relative; overflow:hidden;
+  font-family:'Nunito',sans-serif; color:var(--ink); -webkit-font-smoothing:antialiased;}
+.grid6{display:grid; grid-template-columns:1fr 1fr 1fr; grid-template-rows:1fr 1fr; gap:1.4mm;}
+.grid4{display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:1.4mm;}
+.panel{padding:6.5mm 7mm; position:relative; overflow:hidden;}
+.p-pink{background:var(--pink);} .p-blue{background:var(--blue);}
+.p-yellow{background:var(--yellow);} .p-green{background:var(--green);}
+h2{font-family:'Fredoka',sans-serif; font-weight:600; font-size:20pt; line-height:1.05; letter-spacing:.2px;}
+.h-red{color:var(--red);} .h-blue{color:var(--hblue);} .h-purple{color:var(--purple);}
+.h-green{color:var(--hgreen);} .h-amber{color:var(--amber);}
+.star{position:absolute; top:6mm; right:7mm; font-size:15pt;}
+p,li{font-size:10.5pt; line-height:1.34;}
+.sub{font-weight:700; font-size:11pt; margin-top:1mm;}
+.muted{color:var(--muted);}
+.spacer{height:2.4mm;} .small{height:1.6mm;}
+/* instruction panel 1 */
+.photo{position:absolute; top:6mm; right:6.5mm; width:33mm; height:24mm; object-fit:cover;
+  border-radius:2mm; box-shadow:0 0 0 1px rgba(0,0,0,.06);}
+.title{font-family:'Fredoka',sans-serif; font-weight:600; font-size:14pt; line-height:1.12; color:#2f2f2f; margin-top:15mm;}
+.need{list-style:none;} .need li{position:relative; padding-left:5mm;}
+.need li:before{content:"•"; position:absolute; left:1mm; color:var(--red); font-weight:700;}
+/* steps */
+.steps{list-style:none; display:flex; flex-direction:column; gap:2.9mm; margin-top:1mm;}
+.steps li{display:flex; gap:3mm; align-items:flex-start;}
+.num{flex:0 0 auto; width:7.5mm; height:7.5mm; border-radius:50%; color:#fff;
+  font-family:'Fredoka',sans-serif; font-weight:600; font-size:11pt;
+  display:flex; align-items:center; justify-content:center; margin-top:.2mm;}
+.steps li:nth-child(1) .num{background:var(--b1);} .steps li:nth-child(2) .num{background:var(--b2);}
+.steps li:nth-child(3) .num{background:var(--b3);} .steps li:nth-child(4) .num{background:var(--b4);}
+.steps li:nth-child(5) .num{background:var(--b5);} .steps li:nth-child(6) .num{background:var(--b6);}
+.steps .txt{font-weight:600; font-size:10.5pt; padding-top:.6mm;}
+/* facts */
+.facts{list-style:none; display:flex; flex-direction:column; gap:2.6mm; margin-top:1mm;}
+.facts li{font-weight:600;}
+/* pieces */
+.swatches{display:inline-flex; gap:2mm; vertical-align:middle; margin-left:3mm;}
+.sw{width:5mm; height:5mm; border-radius:1.2mm; border:1px solid rgba(0,0,0,.25);}
+.piecelist{margin-top:1mm;} .piecelist div{font-size:10.5pt; line-height:1.42;}
+.piecelist b{font-weight:800;}
+.total{font-weight:800; margin-top:2mm;}
+.finlist p{margin-bottom:2.2mm; font-weight:600;}
+/* panel 6 */
+.p6{display:flex; gap:0; padding:0; background:var(--yellow);}
+.cover-col{flex:1 1 52%; display:flex; flex-direction:column; align-items:center;
+  padding:5mm 4mm; text-align:center; background:var(--yellow);}
+.cover-card{background:#fff; border-radius:3mm; width:100%; padding:0 0 4mm; overflow:hidden;
+  box-shadow:0 1px 4px rgba(0,0,0,.12);}
+.cover-tab{height:4mm;}
+.cover-card img{width:74%; margin:3mm auto 1mm; display:block;}
+.cover-mk{font-weight:800; font-size:10.5pt; margin-top:1mm;}
+.cover-sp{font-size:10pt; color:var(--muted);}
+.cover-foot{font-weight:700; font-size:9.5pt; line-height:1.35; margin-top:3.5mm; color:#4a4a4a;}
+.fuzzle-col{flex:1 1 48%; background:var(--pink); padding:4.5mm 4mm; text-align:center;
+  display:flex; flex-direction:column; align-items:center;}
+.fuzzle-col img{width:82%; margin-bottom:.5mm;}
+.fuzzle-tag{font-style:italic; font-size:9.5pt; color:var(--muted);}
+.fuzzle-col .themes{font-weight:800; font-size:9.5pt; margin-top:2.5mm; line-height:1.4;}
+.fuzzle-col .setlist{font-weight:700; font-size:9pt; margin-top:2.5mm; line-height:1.45; color:#444;}
+.credit{font-size:8pt; color:#7a6b6b; margin-top:3mm; line-height:1.4;}
+/* cutting */
+.cpanel{padding:7mm 8mm 12mm; display:flex; flex-direction:column;}
+.art{flex:1 1 auto; display:flex; align-items:center; justify-content:center; min-height:0;}
+.cap{font-size:10.5pt; line-height:1.35;} .cap b{font-weight:800;}
+.footer{position:absolute; left:0; right:0; bottom:2mm; text-align:center;
+  font-family:'Fredoka',sans-serif; font-weight:600; font-size:12.5pt; color:var(--red);}
+svg{display:block; overflow:visible;}
+.fcard{border-radius:5mm; padding:5mm 6mm; display:flex; align-items:center; gap:5mm;}
+.fcard .txt{font-size:11pt; font-weight:600; line-height:1.4;}
+</style></head><body>
+<div class="sheet grid4">
+  <section class="panel cpanel p-pink">
+    <h2 class="h-red">Body parts &times;3</h2>
+    <div class="art"><svg width="100mm" height="46mm" viewBox="0 0 100 46">
+      <circle cx="14" cy="23" r="9" fill="#1c1c1c"/><ellipse cx="40" cy="23" rx="9" ry="11" fill="#1c1c1c"/><ellipse cx="76" cy="23" rx="17" ry="19" fill="#1c1c1c"/></svg></div>
+    <div class="cap"><b>Black felt &middot; cut 1 head + 1 thorax + 1 gaster</b><br>Leave thin gaps between them</div>
+  </section>
+  <section class="panel cpanel p-blue">
+    <h2 class="h-blue">Legs &times;6</h2>
+    <div class="art"><svg width="108mm" height="52mm" viewBox="0 0 108 52"><g fill="none" stroke="#1c1c1c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10 L20 16 L34 8"/><path d="M40 10 L56 16 L70 8"/><path d="M76 10 L92 16 L106 8"/><path d="M4 44 L20 38 L34 46"/><path d="M40 44 L56 38 L70 46"/><path d="M76 44 L92 38 L106 46"/></g></svg></div>
+    <div class="cap"><b>Black felt &middot; cut 6 legs</b><br>Bent in the middle, like a real ant leg</div>
+  </section>
+  <section class="panel cpanel p-yellow">
+    <h2 class="h-amber">Antennae &times;2</h2>
+    <div class="art"><svg width="86mm" height="40mm" viewBox="0 0 86 40"><g fill="#1c1c1c" stroke="#1c1c1c"><path fill="none" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M8 32 L24 14 L40 17"/><circle cx="40" cy="17" r="2.6"/></g><g fill="#1c1c1c" stroke="#1c1c1c"><path fill="none" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M48 32 L64 14 L80 17"/><circle cx="80" cy="17" r="2.6"/></g></svg></div>
+    <div class="cap"><b>Black felt &middot; cut 2 antennae</b><br>Bent, with a little club on the end</div>
+  </section>
+  <section class="panel cpanel p-green">
+    <h2 class="h-green">Finished! &#11088;</h2>
+    <div class="art">
+      <div class="fcard" style="background:#b07a44">
+        <svg width="34mm" height="48mm" viewBox="0 0 70 100">
+   <g stroke="#111" stroke-width="2" fill="none" stroke-linecap="round"><path d="M35 40 L14 28"/><path d="M35 48 L10 46"/><path d="M35 56 L14 66"/><path d="M35 40 L56 28"/><path d="M35 48 L60 46"/><path d="M35 56 L56 66"/></g>
+   <g stroke="#111" stroke-width="2" fill="none" stroke-linecap="round"><path d="M30 20 L22 6"/><path d="M40 20 L48 6"/></g>
+   <ellipse cx="35" cy="78" rx="18" ry="20" fill="#1c1c1c"/><ellipse cx="35" cy="50" rx="9" ry="11" fill="#1c1c1c"/><circle cx="35" cy="24" r="9" fill="#1c1c1c"/></svg>
+        <div class="txt" style="color:#3a2410">This is what it<br>looks like!<br>About 8 &times; 5 cm<br>when done</div>
+      </div>
+    </div>
+  </section>
+  <div class="footer">&#9986; Cut along the solid lines!</div>
+</div></body></html>

@@ -1,0 +1,116 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="../fonts_local.css"><style>
+@page { size:297mm 210mm; margin:0; }
+html,body{width:297mm; height:210mm; overflow:hidden;}
+:root{
+  --pink:#ffe0e0; --blue:#e0f0ff; --yellow:#fff5cc; --green:#e8ffe0;
+  --red:#e63946; --hblue:#2a6fdb; --purple:#7b2ff7; --hgreen:#3fae4a; --amber:#e8930c;
+  --ink:#3a3a3a; --muted:#5a5a5a;
+  --b1:#e63946; --b2:#2a6fdb; --b3:#3fae4a; --b4:#e94b9c; --b5:#f4a400; --b6:#7b2ff7;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html,body{background:#fff;}
+.sheet{width:297mm; height:210mm; background:#fff; position:relative; overflow:hidden;
+  font-family:'Nunito',sans-serif; color:var(--ink); -webkit-font-smoothing:antialiased;}
+.grid6{display:grid; grid-template-columns:1fr 1fr 1fr; grid-template-rows:1fr 1fr; gap:1.4mm;}
+.grid4{display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:1.4mm;}
+.panel{padding:6.5mm 7mm; position:relative; overflow:hidden;}
+.p-pink{background:var(--pink);} .p-blue{background:var(--blue);}
+.p-yellow{background:var(--yellow);} .p-green{background:var(--green);}
+h2{font-family:'Fredoka',sans-serif; font-weight:600; font-size:20pt; line-height:1.05; letter-spacing:.2px;}
+.h-red{color:var(--red);} .h-blue{color:var(--hblue);} .h-purple{color:var(--purple);}
+.h-green{color:var(--hgreen);} .h-amber{color:var(--amber);}
+.star{position:absolute; top:6mm; right:7mm; font-size:15pt;}
+p,li{font-size:10.5pt; line-height:1.34;}
+.sub{font-weight:700; font-size:11pt; margin-top:1mm;}
+.muted{color:var(--muted);}
+.spacer{height:2.4mm;} .small{height:1.6mm;}
+/* instruction panel 1 */
+.photo{position:absolute; top:6mm; right:6.5mm; width:33mm; height:24mm; object-fit:cover;
+  border-radius:2mm; box-shadow:0 0 0 1px rgba(0,0,0,.06);}
+.title{font-family:'Fredoka',sans-serif; font-weight:600; font-size:14pt; line-height:1.12; color:#2f2f2f; margin-top:15mm;}
+.need{list-style:none;} .need li{position:relative; padding-left:5mm;}
+.need li:before{content:"•"; position:absolute; left:1mm; color:var(--red); font-weight:700;}
+/* steps */
+.steps{list-style:none; display:flex; flex-direction:column; gap:2.9mm; margin-top:1mm;}
+.steps li{display:flex; gap:3mm; align-items:flex-start;}
+.num{flex:0 0 auto; width:7.5mm; height:7.5mm; border-radius:50%; color:#fff;
+  font-family:'Fredoka',sans-serif; font-weight:600; font-size:11pt;
+  display:flex; align-items:center; justify-content:center; margin-top:.2mm;}
+.steps li:nth-child(1) .num{background:var(--b1);} .steps li:nth-child(2) .num{background:var(--b2);}
+.steps li:nth-child(3) .num{background:var(--b3);} .steps li:nth-child(4) .num{background:var(--b4);}
+.steps li:nth-child(5) .num{background:var(--b5);} .steps li:nth-child(6) .num{background:var(--b6);}
+.steps .txt{font-weight:600; font-size:10.5pt; padding-top:.6mm;}
+/* facts */
+.facts{list-style:none; display:flex; flex-direction:column; gap:2.6mm; margin-top:1mm;}
+.facts li{font-weight:600;}
+/* pieces */
+.swatches{display:inline-flex; gap:2mm; vertical-align:middle; margin-left:3mm;}
+.sw{width:5mm; height:5mm; border-radius:1.2mm; border:1px solid rgba(0,0,0,.25);}
+.piecelist{margin-top:1mm;} .piecelist div{font-size:10.5pt; line-height:1.42;}
+.piecelist b{font-weight:800;}
+.total{font-weight:800; margin-top:2mm;}
+.finlist p{margin-bottom:2.2mm; font-weight:600;}
+/* panel 6 */
+.p6{display:flex; gap:0; padding:0; background:var(--yellow);}
+.cover-col{flex:1 1 52%; display:flex; flex-direction:column; align-items:center;
+  padding:5mm 4mm; text-align:center; background:var(--yellow);}
+.cover-card{background:#fff; border-radius:3mm; width:100%; padding:0 0 4mm; overflow:hidden;
+  box-shadow:0 1px 4px rgba(0,0,0,.12);}
+.cover-tab{height:4mm;}
+.cover-card img{width:74%; margin:3mm auto 1mm; display:block;}
+.cover-mk{font-weight:800; font-size:10.5pt; margin-top:1mm;}
+.cover-sp{font-size:10pt; color:var(--muted);}
+.cover-foot{font-weight:700; font-size:9.5pt; line-height:1.35; margin-top:3.5mm; color:#4a4a4a;}
+.fuzzle-col{flex:1 1 48%; background:var(--pink); padding:4.5mm 4mm; text-align:center;
+  display:flex; flex-direction:column; align-items:center;}
+.fuzzle-col img{width:82%; margin-bottom:.5mm;}
+.fuzzle-tag{font-style:italic; font-size:9.5pt; color:var(--muted);}
+.fuzzle-col .themes{font-weight:800; font-size:9.5pt; margin-top:2.5mm; line-height:1.4;}
+.fuzzle-col .setlist{font-weight:700; font-size:9pt; margin-top:2.5mm; line-height:1.45; color:#444;}
+.credit{font-size:8pt; color:#7a6b6b; margin-top:3mm; line-height:1.4;}
+/* cutting */
+.cpanel{padding:7mm 8mm 12mm; display:flex; flex-direction:column;}
+.art{flex:1 1 auto; display:flex; align-items:center; justify-content:center; min-height:0;}
+.cap{font-size:10.5pt; line-height:1.35;} .cap b{font-weight:800;}
+.footer{position:absolute; left:0; right:0; bottom:2mm; text-align:center;
+  font-family:'Fredoka',sans-serif; font-weight:600; font-size:12.5pt; color:var(--red);}
+svg{display:block; overflow:visible;}
+.fcard{border-radius:5mm; padding:5mm 6mm; display:flex; align-items:center; gap:5mm;}
+.fcard .txt{font-size:11pt; font-weight:600; line-height:1.4;}
+</style></head><body>
+<div class="sheet grid4">
+  <section class="panel cpanel p-pink">
+    <h2 class="h-red">Underbody &amp; back</h2>
+    <div class="art"><svg width="100mm" height="46mm" viewBox="0 0 100 46">
+      <path d="M3 16 Q50 2 97 16 Q50 30 3 16 Z" fill="#dcc9a0" stroke="#333" stroke-width="0.5"/>
+      <line x1="12" y1="16" x2="88" y2="16" stroke="#9a8a60" stroke-width="0.5" stroke-dasharray="2 2"/>
+      <path d="M14 37 Q50 27 86 37 Q50 45 14 37 Z" fill="#8a5a2b" stroke="#333" stroke-width="0.5"/></svg></div>
+    <div class="cap"><b>Pale-tan underbody &times;1 + mid-brown back &times;1</b><br>Dashed = centre guide (don't cut)</div>
+  </section>
+  <section class="panel cpanel p-blue">
+    <h2 class="h-blue">Head, eyes &amp; antennae</h2>
+    <div class="art"><svg width="90mm" height="42mm" viewBox="0 0 90 42">
+      <ellipse cx="22" cy="21" rx="13" ry="10" fill="#d9a441" stroke="#333" stroke-width="0.5"/>
+      <circle cx="44" cy="14" r="4.5" fill="#5e2b2b"/><circle cx="44" cy="28" r="4.5" fill="#5e2b2b"/><g fill="#5e2b2b" stroke="#333" stroke-width="0.4"><path d="M58.3 16.4 L57.7 13.6 L88.0 9.0 Z"/><path d="M57.7 28.4 L58.3 25.6 L88.0 33.0 Z"/></g></svg></div>
+    <div class="cap"><b>Golden head &times;1 &middot; 2 dark-maroon eyes &middot; 2 antennae</b></div>
+  </section>
+  <section class="panel cpanel p-yellow">
+    <h2 class="h-amber">Legs &times;6</h2>
+    <div class="art"><svg width="118mm" height="58mm" viewBox="0 0 118 58"><g fill="#8a5a2b" stroke="#333" stroke-width="0.4"><path d="M56.3 8.5 L55.7 11.5 L26.0 4.0 Z"/><path d="M62.3 11.5 L61.7 8.5 L92.0 4.0 Z"/><path d="M56.1 27.5 L55.9 30.5 L4.0 24.0 Z"/><path d="M62.1 30.5 L61.9 27.5 L114.0 24.0 Z"/><path d="M55.7 47.5 L56.3 50.5 L22.0 56.0 Z"/><path d="M61.7 50.5 L62.3 47.5 L96.0 56.0 Z"/></g></svg></div>
+    <div class="cap"><b>Mid-brown felt &middot; cut 6 legs</b><br>2 short front &middot; 2 long middle &middot; 2 hind &mdash; separate</div>
+  </section>
+  <section class="panel cpanel p-green">
+    <h2 class="h-green">Finished! &#11088;</h2>
+    <div class="art">
+      <div class="fcard" style="background:#8fc0e0">
+        <svg width="52mm" height="42mm" viewBox="0 0 104 84">
+   <g fill="none" stroke="#8a5a2b" stroke-width="2" stroke-linecap="round"><path d="M52 40 L24 18"/><path d="M52 40 L80 18"/><path d="M52 42 L4 8"/><path d="M52 42 L100 8"/><path d="M52 44 L22 76"/><path d="M52 44 L82 76"/></g>
+   <ellipse cx="52" cy="42" rx="30" ry="7" fill="#dcc9a0" stroke="#333" stroke-width="1"/><ellipse cx="52" cy="42" rx="26" ry="4.5" fill="#8a5a2b"/>
+   <ellipse cx="52" cy="24" rx="8" ry="6" fill="#d9a441" stroke="#333" stroke-width="1"/>
+   <circle cx="47" cy="20" r="2.6" fill="#5e2b2b"/><circle cx="57" cy="20" r="2.6" fill="#5e2b2b"/></svg>
+        <div class="txt" style="color:#12303f">This is what it<br>looks like!<br>About 11 &times; 9 cm<br>when done</div>
+      </div>
+    </div>
+  </section>
+  <div class="footer">&#9986; Cut along the solid lines!</div>
+</div></body></html>

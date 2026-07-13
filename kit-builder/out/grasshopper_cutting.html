@@ -1,0 +1,119 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="../fonts_local.css"><style>
+@page { size:297mm 210mm; margin:0; }
+html,body{width:297mm; height:210mm; overflow:hidden;}
+:root{
+  --pink:#ffe0e0; --blue:#e0f0ff; --yellow:#fff5cc; --green:#e8ffe0;
+  --red:#e63946; --hblue:#2a6fdb; --purple:#7b2ff7; --hgreen:#3fae4a; --amber:#e8930c;
+  --ink:#3a3a3a; --muted:#5a5a5a;
+  --b1:#e63946; --b2:#2a6fdb; --b3:#3fae4a; --b4:#e94b9c; --b5:#f4a400; --b6:#7b2ff7;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html,body{background:#fff;}
+.sheet{width:297mm; height:210mm; background:#fff; position:relative; overflow:hidden;
+  font-family:'Nunito',sans-serif; color:var(--ink); -webkit-font-smoothing:antialiased;}
+.grid6{display:grid; grid-template-columns:1fr 1fr 1fr; grid-template-rows:1fr 1fr; gap:1.4mm;}
+.grid4{display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:1.4mm;}
+.panel{padding:6.5mm 7mm; position:relative; overflow:hidden;}
+.p-pink{background:var(--pink);} .p-blue{background:var(--blue);}
+.p-yellow{background:var(--yellow);} .p-green{background:var(--green);}
+h2{font-family:'Fredoka',sans-serif; font-weight:600; font-size:20pt; line-height:1.05; letter-spacing:.2px;}
+.h-red{color:var(--red);} .h-blue{color:var(--hblue);} .h-purple{color:var(--purple);}
+.h-green{color:var(--hgreen);} .h-amber{color:var(--amber);}
+.star{position:absolute; top:6mm; right:7mm; font-size:15pt;}
+p,li{font-size:10.5pt; line-height:1.34;}
+.sub{font-weight:700; font-size:11pt; margin-top:1mm;}
+.muted{color:var(--muted);}
+.spacer{height:2.4mm;} .small{height:1.6mm;}
+/* instruction panel 1 */
+.photo{position:absolute; top:6mm; right:6.5mm; width:33mm; height:24mm; object-fit:cover;
+  border-radius:2mm; box-shadow:0 0 0 1px rgba(0,0,0,.06);}
+.title{font-family:'Fredoka',sans-serif; font-weight:600; font-size:14pt; line-height:1.12; color:#2f2f2f; margin-top:15mm;}
+.need{list-style:none;} .need li{position:relative; padding-left:5mm;}
+.need li:before{content:"•"; position:absolute; left:1mm; color:var(--red); font-weight:700;}
+/* steps */
+.steps{list-style:none; display:flex; flex-direction:column; gap:2.9mm; margin-top:1mm;}
+.steps li{display:flex; gap:3mm; align-items:flex-start;}
+.num{flex:0 0 auto; width:7.5mm; height:7.5mm; border-radius:50%; color:#fff;
+  font-family:'Fredoka',sans-serif; font-weight:600; font-size:11pt;
+  display:flex; align-items:center; justify-content:center; margin-top:.2mm;}
+.steps li:nth-child(1) .num{background:var(--b1);} .steps li:nth-child(2) .num{background:var(--b2);}
+.steps li:nth-child(3) .num{background:var(--b3);} .steps li:nth-child(4) .num{background:var(--b4);}
+.steps li:nth-child(5) .num{background:var(--b5);} .steps li:nth-child(6) .num{background:var(--b6);}
+.steps .txt{font-weight:600; font-size:10.5pt; padding-top:.6mm;}
+/* facts */
+.facts{list-style:none; display:flex; flex-direction:column; gap:2.6mm; margin-top:1mm;}
+.facts li{font-weight:600;}
+/* pieces */
+.swatches{display:inline-flex; gap:2mm; vertical-align:middle; margin-left:3mm;}
+.sw{width:5mm; height:5mm; border-radius:1.2mm; border:1px solid rgba(0,0,0,.25);}
+.piecelist{margin-top:1mm;} .piecelist div{font-size:10.5pt; line-height:1.42;}
+.piecelist b{font-weight:800;}
+.total{font-weight:800; margin-top:2mm;}
+.finlist p{margin-bottom:2.2mm; font-weight:600;}
+/* panel 6 */
+.p6{display:flex; gap:0; padding:0; background:var(--yellow);}
+.cover-col{flex:1 1 52%; display:flex; flex-direction:column; align-items:center;
+  padding:5mm 4mm; text-align:center; background:var(--yellow);}
+.cover-card{background:#fff; border-radius:3mm; width:100%; padding:0 0 4mm; overflow:hidden;
+  box-shadow:0 1px 4px rgba(0,0,0,.12);}
+.cover-tab{height:4mm;}
+.cover-card img{width:74%; margin:3mm auto 1mm; display:block;}
+.cover-mk{font-weight:800; font-size:10.5pt; margin-top:1mm;}
+.cover-sp{font-size:10pt; color:var(--muted);}
+.cover-foot{font-weight:700; font-size:9.5pt; line-height:1.35; margin-top:3.5mm; color:#4a4a4a;}
+.fuzzle-col{flex:1 1 48%; background:var(--pink); padding:4.5mm 4mm; text-align:center;
+  display:flex; flex-direction:column; align-items:center;}
+.fuzzle-col img{width:82%; margin-bottom:.5mm;}
+.fuzzle-tag{font-style:italic; font-size:9.5pt; color:var(--muted);}
+.fuzzle-col .themes{font-weight:800; font-size:9.5pt; margin-top:2.5mm; line-height:1.4;}
+.fuzzle-col .setlist{font-weight:700; font-size:9pt; margin-top:2.5mm; line-height:1.45; color:#444;}
+.credit{font-size:8pt; color:#7a6b6b; margin-top:3mm; line-height:1.4;}
+/* cutting */
+.cpanel{padding:7mm 8mm 12mm; display:flex; flex-direction:column;}
+.art{flex:1 1 auto; display:flex; align-items:center; justify-content:center; min-height:0;}
+.cap{font-size:10.5pt; line-height:1.35;} .cap b{font-weight:800;}
+.footer{position:absolute; left:0; right:0; bottom:2mm; text-align:center;
+  font-family:'Fredoka',sans-serif; font-weight:600; font-size:12.5pt; color:var(--red);}
+svg{display:block; overflow:visible;}
+.fcard{border-radius:5mm; padding:5mm 6mm; display:flex; align-items:center; gap:5mm;}
+.fcard .txt{font-size:11pt; font-weight:600; line-height:1.4;}
+</style></head><body>
+<div class="sheet grid4">
+  <section class="panel cpanel p-pink">
+    <h2 class="h-red">Body &amp; wing</h2>
+    <div class="art"><svg width="108mm" height="52mm" viewBox="0 0 108 52">
+      <path d="M6 30 Q8 15 26 17 Q62 19 100 27 Q64 39 26 41 Q8 43 6 30 Z" fill="#6ab04a" stroke="#333" stroke-width="0.5"/>
+      <path d="M16 9 Q56 1 98 9 Q56 17 16 9 Z" fill="#d8c48f" stroke="#333" stroke-width="0.5"/></svg></div>
+    <div class="cap"><b>Green body &times;1 + tan wing &times;1</b><br>Body has the head at the left</div>
+  </section>
+  <section class="panel cpanel p-blue">
+    <h2 class="h-blue">Hind leg (2 parts)</h2>
+    <div class="art"><svg width="94mm" height="54mm" viewBox="0 0 94 54">
+      <path d="M6 46 Q8 12 42 16 Q56 21 47 40 Q33 50 16 49 Q9 49 6 46 Z" fill="#6ab04a" stroke="#333" stroke-width="0.5"/><g fill="#6ab04a" stroke="#333" stroke-width="0.4"><path d="M52.2 20.1 L55.8 15.9 L90.0 48.0 Z"/></g></svg></div>
+    <div class="cap"><b>Green felt &middot; 1 hind femur + 1 hind tibia</b><br>Two separate pieces &mdash; bend into a Z</div>
+  </section>
+  <section class="panel cpanel p-yellow">
+    <h2 class="h-amber">Front legs, eye &amp; antennae</h2>
+    <div class="art"><svg width="98mm" height="44mm" viewBox="0 0 98 44"><g fill="#6ab04a" stroke="#333" stroke-width="0.4"><path d="M8.1 8.7 L11.9 7.3 L20.0 34.0 Z"/><path d="M26.1 8.7 L29.9 7.3 L38.0 34.0 Z"/></g><circle cx="56" cy="21" r="6" fill="#1c1c1c"/><g fill="#6ab04a" stroke="#333" stroke-width="0.4"><path d="M75.0 34.8 L73.0 33.2 L96.0 8.0 Z"/><path d="M83.1 36.8 L80.9 35.2 L98.0 14.0 Z"/></g></svg></div>
+    <div class="cap"><b>2 front legs (green) &middot; 1 eye (black) &middot; 2 antennae (green)</b></div>
+  </section>
+  <section class="panel cpanel p-green">
+    <h2 class="h-green">Finished! &#11088;</h2>
+    <div class="art">
+      <div class="fcard" style="background:#8bb74e">
+        <svg width="40mm" height="46mm" viewBox="0 0 90 104">
+   <g fill="none" stroke="#6ab04a" stroke-linecap="round" stroke-linejoin="round">
+     <path d="M40 66 L13 53 L23 93" stroke-width="6"/><path d="M50 66 L77 53 L67 93" stroke-width="6"/></g>
+   <g fill="none" stroke="#6ab04a" stroke-width="3" stroke-linecap="round">
+     <path d="M37 34 L15 26"/><path d="M53 34 L75 26"/><path d="M36 48 L13 47"/><path d="M54 48 L77 47"/></g>
+   <path d="M45 22 Q57 30 54 60 Q51 88 45 95 Q39 88 36 60 Q33 30 45 22 Z" fill="#6ab04a" stroke="#333" stroke-width="1"/>
+   <path d="M45 30 Q54 56 45 86 Q36 56 45 30 Z" fill="#d8c48f" stroke="#333" stroke-width="1"/>
+   <ellipse cx="45" cy="16" rx="9" ry="8" fill="#6ab04a" stroke="#333" stroke-width="1"/>
+   <circle cx="41" cy="14" r="2.4" fill="#1c1c1c"/><circle cx="49" cy="14" r="2.4" fill="#1c1c1c"/>
+   <g fill="none" stroke="#6ab04a" stroke-width="2" stroke-linecap="round"><path d="M42 9 Q37 4 32 1"/><path d="M48 9 Q53 4 58 1"/></g></svg>
+        <div class="txt" style="color:#22331a">This is what it<br>looks like!<br>About 11 &times; 6 cm<br>when done</div>
+      </div>
+    </div>
+  </section>
+  <div class="footer">&#9986; Cut along the solid lines!</div>
+</div></body></html>
