@@ -66,14 +66,12 @@ SPECIES["ladybird"] = {
  "cut_panels":[
    {"heading":"Body &times;1","cap":"<b>Red felt &middot; cut 1</b><br>Dashed line = centre (don't cut!)",
     "svg":f'<svg width="66mm" height="66mm" viewBox="0 0 66 66"><circle cx="33" cy="33" r="31.5" fill="{RED}" stroke="#111" stroke-width="0.5"/><line x1="33" y1="4" x2="33" y2="62" stroke="#8a8a8a" stroke-width="0.5" stroke-dasharray="2 2"/></svg>'},
-   {"heading":"Head, legs &amp; antennae","cap":"<b>Black felt &middot; cut 1 head + 6 legs + 2 antennae</b><br>Legs taper to a point",
-    "svg":f'''<svg width="60mm" height="44mm" viewBox="0 0 60 44">
-      <g fill="none" stroke="{BLK}" stroke-width="1.6" stroke-linecap="round"><path d="M24 20 Q19 10 18 6"/><path d="M36 20 Q41 10 42 6"/></g>
-      <circle cx="18" cy="6" r="2.4" fill="{BLK}"/><circle cx="42" cy="6" r="2.4" fill="{BLK}"/>
-      <path d="M18 30 A12 12 0 0 1 42 30 Z" fill="{BLK}"/>
-      <circle cx="25" cy="26" r="2.4" fill="#fff"/><circle cx="35" cy="26" r="2.4" fill="#fff"/>
-      <g fill="{BLK}"><path d="M18 22.5 L4 21 L18 25.5 Z"/><path d="M16 28.5 L2 30 L16 31.5 Z"/><path d="M18 34.5 L4 39 L18 37.5 Z"/>
-      <path d="M42 22.5 L56 21 L42 25.5 Z"/><path d="M44 28.5 L58 30 L44 31.5 Z"/><path d="M42 34.5 L56 39 L42 37.5 Z"/></g></svg>'''},
+   {"heading":"Head, legs &amp; antennae","cap":"<b>Black felt &middot; cut 1 head + 6 legs + 2 antennae</b><br>All separate pieces &middot; legs taper to a point",
+    "svg":f'''<svg width="118mm" height="52mm" viewBox="0 0 118 52">
+      <path d="M8 34 A13 13 0 0 1 34 34 Z" fill="{BLK}"/>
+      <circle cx="15" cy="30" r="2.6" fill="#fff"/><circle cx="27" cy="30" r="2.6" fill="#fff"/>
+      {sep_legs(BLK,[(50,12,38,10),(50,25,37,24),(50,38,38,40),(64,12,76,10),(64,25,77,24),(64,38,76,40)],3.0)}
+      {bent_antenna(88,40,94,26,100,23,BLK,2.2,2.4)}{bent_antenna(104,40,110,26,116,23,BLK,2.2,2.4)}</svg>'''},
    {"heading":"Spots &times;7","cap":"<b>Black felt &middot; cut 7 circles</b><br>1 top-centre + 3 on each side",
     "svg":f'''<svg width="96mm" height="42mm" viewBox="0 0 96 42"><g fill="{BLK}">
       <circle cx="14" cy="12" r="5.5"/><circle cx="36" cy="12" r="5.5"/><circle cx="58" cy="12" r="5.5"/><circle cx="80" cy="12" r="5.5"/>
