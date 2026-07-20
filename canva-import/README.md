@@ -1,36 +1,44 @@
 # canva-import — Style-A kit sheets for editing in Canva
 
-SVG versions of the 9 Style-A kits (instruction + cutting sheet each = 18 files),
-sized as **A4 landscape** vector so they scale perfectly for print. Import into Canva,
-make your edits, then export a print PDF from Canva (Canva adds bleed + crop marks on
-export — choose **PDF Print** with crop marks & bleed).
+Canva-ready exports of the 9 Style-A kits (instruction + cutting sheet each = 18 sheets),
+sized **A4 landscape** so they scale perfectly for print. Edit in Canva, then export a
+print PDF from Canva (it adds bleed + crop marks on export).
 
-## Two versions
+> These are **derived** from `../kit-builder/` (the source of truth). If the design
+> changes there, run **`python refresh.py`** to rebuild this folder.
 
-- **`vector-svg/`** — the exact layouts as vector. Every shape, colour, photo and element
-  is editable; **text is outlined** (crisp, print-perfect, but not re-typeable). Use this
-  for graphics / colour / layout tweaks. **Ready now.**
-- **`editable-svg/`** — the same sheets rebuilt with **live, editable text** (Fredoka +
-  Nunito, both available in Canva) so you can retype wording too. _(being added)_
+## Two routes — pick by what you're editing
 
-Pick whichever suits the edit; they're the same design.
+| Folder | Canva action | Best for | Text |
+|--------|--------------|----------|------|
+| **`vector-svg/`** | Uploads → Upload files → drop the `.svg` (needs Canva **Pro**) | graphics, colours, shapes, layout | outlined (crisp, not re-typeable) |
+| **`pdf/`** | Create a design → **Import PDF** (works on **Free**) | changing **wording** | Canva extracts it into **editable text boxes** |
 
-## Import into Canva
+Same design in both — use whichever fits the edit. For a sheet where you need both, import
+the PDF (for text) and, if a shape needs finessing, grab it from the matching SVG.
 
-1. Canva → **Create a design** → A4 (or any) → **Uploads → Upload files** → drop the `.svg`.
-   (SVG upload needs Canva Pro. If you're on Free, use the PDFs in
-   `../kit-builder/pdf_home/` via **Create a design → Import PDF** instead.)
-2. Drag the uploaded SVG onto the page; resize to fill.
-3. Edit. In `vector-svg/` the shapes/photos/colours are all selectable elements.
-4. **Export:** Share → Download → **PDF Print**, tick **Crop marks and bleed** → send that
-   file to the printer. Keep the scale at 100%.
+## Steps
 
-## Fonts
+1. **Import** (see table). One file = one A4-landscape sheet.
+2. **Edit.** Fonts are **Fredoka** (headings) + **Nunito** (body) — both in Canva's font
+   list, so text matches.
+3. **Export for the printer:** Share → Download → **PDF Print**, tick **Crop marks and
+   bleed**, keep scale **100%**. Send that file to the printer.
 
-Headings **Fredoka**, body **Nunito** — both are in Canva's font list, so the live-text
-version (`editable-svg/`) matches without extra setup.
+## Files
 
-## Source
+```
+canva-import/
+├── vector-svg/   18 A4-landscape SVGs (graphics editing)
+├── pdf/          18 A4-landscape PDFs (text editing via Canva PDF import)
+├── refresh.py    regenerate both from ../kit-builder after design changes
+└── README.md
+```
 
-These are generated from `../kit-builder/` (see its README). To change the design itself
-(not just a one-off Canva tweak), edit `kit-builder/species_data.py` and regenerate.
+## Note on "live-text" SVG
+
+True editable-text **SVG** isn't produced here on purpose: headless-Chrome PDFs embed the
+web-fonts as Type3, so a clean text-SVG can't be extracted mechanically — and hand-
+rebuilding the layout as native SVG would fork from `kit-builder` (the authoritative
+source). The **PDF-import route above gives editable text in Canva** without that risk.
+If you specifically need native live-text SVGs, that's a separate build — just ask.
