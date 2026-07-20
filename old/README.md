@@ -19,6 +19,22 @@ old/
     └── GIW-felt-kits-editable-master.pdf   18-page combined (Canva "Import PDF")
 ```
 
+## Also archived — Gen-0/1 original single-sheet "booklet" kits (18 species)
+
+The very first FuzzleWorld design (one A4 sheet per kit, 6×2 booklet), superseded:
+
+```
+old/
+├── templates/     18 species under aquatic/ meadow/ underground/  (svg + pdf + photo + SOURCE.txt each)
+├── svgs/          18 self-contained SVGs (+ intro-page)
+├── editable-pdfs/ editable PDFs + all-kits booklet
+├── FuzzleWorld-all-kits.pdf   the 19-page booklet
+└── intro-page.pdf
+```
+
+The live FuzzleWorld game site (`../docs/kits.html`) now points its "Download PDF"
+links at `old/templates/…`, so those downloads still work.
+
 ## Kept live (NOT archived)
 
 - **Generators / source of truth:** `kit-builder/species_data.py`, `gen.py`,
